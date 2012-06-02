@@ -1,0 +1,6 @@
+require 'refinery/fg'
+#require 'refinery/professions'
+#require 'refinery/students'
+#require 'refinery/works'
+#require 'refinery/reports'
+#require 'refinery/teachers'

@@ -1,0 +1,73 @@
+<%= form_for [refinery, :fg_admin, @work] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @work,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :desc -%>
+    <%= f.text_field :desc  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :tag_list -%>
+    <%= f.text_field :tag_list  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :research -%>
+    <%= f.radio_button :research, 1, :checked => @work.research  -%>研发
+    <%= f.radio_button :research, 0, :checked => !@work.research %>不研发
+
+  </div>
+  
+  <div class='field'>
+    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
+      <ul id='page_parts'>
+        <% [:content].each_with_index do |part, part_index| %>
+          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
+            <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/fg/work", :default => part.to_s.titleize), "##{part}" %>
+          </li>
+        <% end %>
+      </ul>
+      <div id='page_part_editors'>
+        <% [:content].each do |part| %>
+          <div class='page_part' id='<%= part %>'>
+            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :main_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :main_image_id,
+               :image => @work.main_image,
+               :toggle_image_display => false %>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.works.admin.works.work'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @work.name) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

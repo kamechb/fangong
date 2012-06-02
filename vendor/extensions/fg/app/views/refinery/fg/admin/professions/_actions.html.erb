@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Fg::Admin::ProfessionsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.fg_admin_professions_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_fg_admin_profession_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Fg::Admin::ProfessionsController.sortable? && ::Refinery::Fg::Profession.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Professions"),
+                 refinery.fg_admin_professions_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Professions"),
+                 refinery.fg_admin_professions_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @report.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @report.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Desc</h1>
+    <p>
+      <%=raw @report.desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @report.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @report.image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="reports">
+      <% @reports.each do |report| %>
+        <li>
+          <%= link_to report.title, refinery.fg_report_path(report) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,126 @@
+<%= form_for [refinery, :fg_admin, @student] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @student,
+              :include_object_name => true %>
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :address -%>
+    <%= f.text_field :address -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :qq -%>
+    <%= f.text_field :qq -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :msn -%>
+    <%= f.text_field :msn  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :tel -%>
+    <%= f.text_field :tel -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :staying -%>
+    <%= f.text_field :staying -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :profession_id -%>
+    <%= f.select :profession_id, Refinery::Fg::Profession.all.map { |p| [p.name, p.id] } -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :know_from -%>
+    <%= f.select :know_from, map_number_select(Refinery::Fg::Student::KNOW_FROMS), :class => 'larger widest' -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :leave_message -%>
+    <%= f.text_field :leave_message  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :grade -%>
+    <%= f.text_field :grade  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :study_class -%>
+    <%= f.text_field :study_class  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :interest -%>
+    <%= f.text_field :interest  -%>
+
+  </div>
+  
+  <div class='field'>
+    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
+      <ul id='page_parts'>
+        <% [:job, :feedback].each_with_index do |part, part_index| %>
+          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
+            <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/fg/student", :default => part.to_s.titleize), "##{part}" %>
+          </li>
+        <% end %>
+      </ul>
+      <div id='page_part_editors'>
+        <% [:job, :feedback].each do |part| %>
+          <div class='page_part' id='<%= part %>'>
+            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :avatar -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :avatar_id,
+               :image => @student.avatar,
+               :toggle_image_display => false %>
+
+  </div>
+  
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.students.admin.students.student'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @student.name) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

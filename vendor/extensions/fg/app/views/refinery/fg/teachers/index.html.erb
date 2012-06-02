@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="teachers">
+    <% @teachers.each do |teacher| %>
+      <li>
+        <%= link_to teacher.name, refinery.fg_teacher_path(teacher) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,160 @@
+es:
+  refinery:
+    plugins:
+      teachers:
+        title: Teachers
+      reports:
+        title: Reports
+      works:
+        title: Works
+      students:
+        title: Students
+      professions:
+        title: Professions
+      fgs:
+        title: Fgs
+    fg:
+      admin:
+        teachers:
+          actions:
+            create_new: Crear nuevo teacher
+            reorder: Reordenar teachers
+            reorder_done: Reordenación de teachers completada
+          records:
+            title: Teachers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay teachers todavía. Pulsa en "Crear nuevo Teacher"
+              para crear tu primer teacher.
+          teacher:
+            view_live_html: Ver este teacher como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este teacher
+            delete: Borrar este teacher para siempre
+        reports:
+          actions:
+            create_new: Crear nuevo report
+            reorder: Reordenar reports
+            reorder_done: Reordenación de reports completada
+          records:
+            title: Reports
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay reports todavía. Pulsa en "Crear nuevo Report" para
+              crear tu primer report.
+          report:
+            view_live_html: Ver este report como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este report
+            delete: Borrar este report para siempre
+        works:
+          actions:
+            create_new: Crear nuevo work
+            reorder: Reordenar works
+            reorder_done: Reordenación de works completada
+          records:
+            title: Works
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay works todavía. Pulsa en "Crear nuevo Work" para crear
+              tu primer work.
+          work:
+            view_live_html: Ver este work como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este work
+            delete: Borrar este work para siempre
+        students:
+          actions:
+            create_new: Crear nuevo student
+            reorder: Reordenar students
+            reorder_done: Reordenación de students completada
+          records:
+            title: Students
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay students todavía. Pulsa en "Crear nuevo Student"
+              para crear tu primer student.
+          student:
+            view_live_html: Ver este student como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este student
+            delete: Borrar este student para siempre
+        professions:
+          actions:
+            create_new: Crear nuevo profession
+            reorder: Reordenar professions
+            reorder_done: Reordenación de professions completada
+          records:
+            title: Professions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay professions todavía. Pulsa en "Crear nuevo Profession"
+              para crear tu primer profession.
+          profession:
+            view_live_html: Ver este profession como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este profession
+            delete: Borrar este profession para siempre
+        fgs:
+          actions:
+            create_new: Crear nuevo fg
+            reorder: Reordenar fgs
+            reorder_done: Reordenación de fgs completada
+          records:
+            title: Fgs
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay fgs todavía. Pulsa en "Crear nuevo Fg" para crear
+              tu primer fg.
+          fg:
+            view_live_html: Ver este fg como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este fg
+            delete: Borrar este fg para siempre
+      teachers:
+        show:
+          other: Otros teachers
+      reports:
+        show:
+          other: Otros reports
+      works:
+        show:
+          other: Otros works
+      students:
+        show:
+          other: Otros students
+      professions:
+        show:
+          other: Otros professions
+      fgs:
+        show:
+          other: Otros fgs
+  activerecord:
+    attributes:
+      refinery/fg/teacher:
+        name: Name
+        title: Title
+        works: Works
+        desc: Desc
+        content: Content
+        avatar: Avatar
+      refinery/fg/report:
+        title: Title
+        desc: Desc
+        content: Content
+        image: Image
+      refinery/fg/work:
+        name: Name
+        desc: Desc
+        content: Content
+        main_image: Main Image
+      refinery/fg/student:
+        name: Name
+        grade: Grade
+        study_class: Study Class
+        course_id: Course
+        interest: Interest
+        tel: Tel
+        job: Job
+        avatar: Avatar
+        feedback: Feedback
+      refinery/fg/profession:
+        name: Name
+        content: Content
+        open_at: Open At
+      refinery/fg/fg:
+        name: Name

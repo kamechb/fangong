@@ -1,0 +1,155 @@
+fr:
+  refinery:
+    plugins:
+      teachers:
+        title: Teachers
+      reports:
+        title: Reports
+      works:
+        title: Works
+      students:
+        title: Students
+      professions:
+        title: Professions
+      fgs:
+        title: Fgs
+    fg:
+      admin:
+        teachers:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Teacher
+            reorder: Réordonner les Teachers
+            reorder_done: Fin de réordonnancement des Teachers
+          records:
+            title: Teachers
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Teacher. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Teacher" pour créer votre premi(er/ère) teacher.
+          teacher:
+            view_live_html: Voir ce(t/tte) teacher <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) teacher
+            delete: Supprimer définitivement ce(t/tte) teacher
+        reports:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Report
+            reorder: Réordonner les Reports
+            reorder_done: Fin de réordonnancement des Reports
+          records:
+            title: Reports
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Report. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Report" pour créer votre premi(er/ère) report.
+          report:
+            view_live_html: Voir ce(t/tte) report <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) report
+            delete: Supprimer définitivement ce(t/tte) report
+        works:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Work
+            reorder: Réordonner les Works
+            reorder_done: Fin de réordonnancement des Works
+          records:
+            title: Works
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Work. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Work" pour créer votre premi(er/ère) work.
+          work:
+            view_live_html: Voir ce(t/tte) work <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) work
+            delete: Supprimer définitivement ce(t/tte) work
+        students:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Student
+            reorder: Réordonner les Students
+            reorder_done: Fin de réordonnancement des Students
+          records:
+            title: Students
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Student. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Student" pour créer votre premi(er/ère) student.
+          student:
+            view_live_html: Voir ce(t/tte) student <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) student
+            delete: Supprimer définitivement ce(t/tte) student
+        professions:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Profession
+            reorder: Réordonner les Professions
+            reorder_done: Fin de réordonnancement des Professions
+          records:
+            title: Professions
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Profession. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Profession" pour créer votre premi(er/ère) profession.
+          profession:
+            view_live_html: Voir ce(t/tte) profession <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) profession
+            delete: Supprimer définitivement ce(t/tte) profession
+        fgs:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Fg
+            reorder: Réordonner les Fgs
+            reorder_done: Fin de réordonnancement des Fgs
+          records:
+            title: Fgs
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Fg. Cliquer sur "Créer un(e)
+              nouve(au/l/lle) Fg" pour créer votre premi(er/ère) fg.
+          fg:
+            view_live_html: Voir ce(t/tte) fg <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) fg
+            delete: Supprimer définitivement ce(t/tte) fg
+      teachers:
+        show:
+          other: Autres Teachers
+      reports:
+        show:
+          other: Autres Reports
+      works:
+        show:
+          other: Autres Works
+      students:
+        show:
+          other: Autres Students
+      professions:
+        show:
+          other: Autres Professions
+      fgs:
+        show:
+          other: Autres Fgs
+  activerecord:
+    attributes:
+      refinery/fg/teacher:
+        name: Name
+        title: Title
+        works: Works
+        desc: Desc
+        content: Content
+        avatar: Avatar
+      refinery/fg/report:
+        title: Title
+        desc: Desc
+        content: Content
+        image: Image
+      refinery/fg/work:
+        name: Name
+        desc: Desc
+        content: Content
+        main_image: Main Image
+      refinery/fg/student:
+        name: Name
+        grade: Grade
+        study_class: Study Class
+        course_id: Course
+        interest: Interest
+        tel: Tel
+        job: Job
+        avatar: Avatar
+        feedback: Feedback
+      refinery/fg/profession:
+        name: Name
+        content: Content
+        open_at: Open At
+      refinery/fg/fg:
+        name: Name

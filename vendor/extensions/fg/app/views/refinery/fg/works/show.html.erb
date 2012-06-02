@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @work.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @work.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Desc</h1>
+    <p>
+      <%=raw @work.desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @work.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Main Image</h1>
+    <p>
+      <%= image_fu @work.main_image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="works">
+      <% @works.each do |work| %>
+        <li>
+          <%= link_to work.name, refinery.fg_work_path(work) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

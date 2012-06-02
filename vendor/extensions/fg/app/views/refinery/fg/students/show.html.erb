@@ -1,0 +1,75 @@
+<% content_for :body_content_title do %>
+  <%= @student.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @student.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Grade</h1>
+    <p>
+      <%=raw @student.grade %>
+    </p>
+  </section>
+  <section>
+    <h1>Study Class</h1>
+    <p>
+      <%=raw @student.study_class %>
+    </p>
+  </section>
+  <section>
+    <h1>Course</h1>
+    <p>
+      <%=raw @student.course_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Interest</h1>
+    <p>
+      <%=raw @student.interest %>
+    </p>
+  </section>
+  <section>
+    <h1>Tel</h1>
+    <p>
+      <%=raw @student.tel %>
+    </p>
+  </section>
+  <section>
+    <h1>Job</h1>
+    <p>
+      <%=raw @student.job %>
+    </p>
+  </section>
+  <section>
+    <h1>Avatar</h1>
+    <p>
+      <%= image_fu @student.avatar, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Feedback</h1>
+    <p>
+      <%=raw @student.feedback %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="students">
+      <% @students.each do |student| %>
+        <li>
+          <%= link_to student.name, refinery.fg_student_path(student) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

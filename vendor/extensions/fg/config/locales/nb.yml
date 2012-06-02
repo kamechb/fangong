@@ -1,0 +1,160 @@
+nb:
+  refinery:
+    plugins:
+      teachers:
+        title: Teachers
+      reports:
+        title: Reports
+      works:
+        title: Works
+      students:
+        title: Students
+      professions:
+        title: Professions
+      fgs:
+        title: Fgs
+    fg:
+      admin:
+        teachers:
+          actions:
+            create_new: Lag en ny Teacher
+            reorder: Endre rekkefølgen på Teachers
+            reorder_done: Ferdig å endre rekkefølgen Teachers
+          records:
+            title: Teachers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Teachers enda. Klikk på "Lag en ny Teacher"
+              for å legge til din første teacher.
+          teacher:
+            view_live_html: Vis hvordan denne teacher ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne teacher
+            delete: Fjern denne teacher permanent
+        reports:
+          actions:
+            create_new: Lag en ny Report
+            reorder: Endre rekkefølgen på Reports
+            reorder_done: Ferdig å endre rekkefølgen Reports
+          records:
+            title: Reports
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Reports enda. Klikk på "Lag en ny Report" for
+              å legge til din første report.
+          report:
+            view_live_html: Vis hvordan denne report ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne report
+            delete: Fjern denne report permanent
+        works:
+          actions:
+            create_new: Lag en ny Work
+            reorder: Endre rekkefølgen på Works
+            reorder_done: Ferdig å endre rekkefølgen Works
+          records:
+            title: Works
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Works enda. Klikk på "Lag en ny Work" for å
+              legge til din første work.
+          work:
+            view_live_html: Vis hvordan denne work ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne work
+            delete: Fjern denne work permanent
+        students:
+          actions:
+            create_new: Lag en ny Student
+            reorder: Endre rekkefølgen på Students
+            reorder_done: Ferdig å endre rekkefølgen Students
+          records:
+            title: Students
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Students enda. Klikk på "Lag en ny Student"
+              for å legge til din første student.
+          student:
+            view_live_html: Vis hvordan denne student ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne student
+            delete: Fjern denne student permanent
+        professions:
+          actions:
+            create_new: Lag en ny Profession
+            reorder: Endre rekkefølgen på Professions
+            reorder_done: Ferdig å endre rekkefølgen Professions
+          records:
+            title: Professions
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Professions enda. Klikk på "Lag en ny Profession"
+              for å legge til din første profession.
+          profession:
+            view_live_html: Vis hvordan denne profession ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne profession
+            delete: Fjern denne profession permanent
+        fgs:
+          actions:
+            create_new: Lag en ny Fg
+            reorder: Endre rekkefølgen på Fgs
+            reorder_done: Ferdig å endre rekkefølgen Fgs
+          records:
+            title: Fgs
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Fgs enda. Klikk på "Lag en ny Fg" for å legge
+              til din første fg.
+          fg:
+            view_live_html: Vis hvordan denne fg ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne fg
+            delete: Fjern denne fg permanent
+      teachers:
+        show:
+          other: Andre Teachers
+      reports:
+        show:
+          other: Andre Reports
+      works:
+        show:
+          other: Andre Works
+      students:
+        show:
+          other: Andre Students
+      professions:
+        show:
+          other: Andre Professions
+      fgs:
+        show:
+          other: Andre Fgs
+  activerecord:
+    attributes:
+      refinery/fg/teacher:
+        name: Name
+        title: Title
+        works: Works
+        desc: Desc
+        content: Content
+        avatar: Avatar
+      refinery/fg/report:
+        title: Title
+        desc: Desc
+        content: Content
+        image: Image
+      refinery/fg/work:
+        name: Name
+        desc: Desc
+        content: Content
+        main_image: Main Image
+      refinery/fg/student:
+        name: Name
+        grade: Grade
+        study_class: Study Class
+        course_id: Course
+        interest: Interest
+        tel: Tel
+        job: Job
+        avatar: Avatar
+        feedback: Feedback
+      refinery/fg/profession:
+        name: Name
+        content: Content
+        open_at: Open At
+      refinery/fg/fg:
+        name: Name

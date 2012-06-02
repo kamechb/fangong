@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="professions">
+    <% @professions.each do |profession| %>
+      <li>
+        <%= link_to profession.name, refinery.fg_profession_path(profession) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

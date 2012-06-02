@@ -1,0 +1,14 @@
+设置可以通过 config/initialize/refinery/*.rb文件来进行设置
+override view (rake refinery:override view=...)
+创建engine即extension
+  可以更改seed
+通过decorators来为controller, model添加自己的功能
+
+
+rails g refinery:engine place name:string --extension events
+rails generate refinery:events places
+
+
+师资Teacher
+  name, title, description, photo, intro 
+

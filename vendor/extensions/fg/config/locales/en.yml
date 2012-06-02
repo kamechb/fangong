@@ -1,0 +1,154 @@
+en:
+  refinery:
+    plugins:
+      teachers:
+        title: Teachers
+      reports:
+        title: Reports
+      works:
+        title: Works
+      students:
+        title: Students
+      professions:
+        title: Professions
+      fg:
+        title: Fg
+    fg:
+      admin:
+        teachers:
+          actions:
+            create_new: Add New Teacher
+            reorder: Reorder Teachers
+            reorder_done: Done Reordering Teachers
+          records:
+            title: Teachers
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Teachers yet. Click "Add New Teacher" to add
+              your first teacher.
+          teacher:
+            view_live_html: View this teacher live <br/><em>(opens in a new window)</em>
+            edit: Edit this teacher
+            delete: Remove this teacher forever
+        reports:
+          actions:
+            create_new: Add New Report
+            reorder: Reorder Reports
+            reorder_done: Done Reordering Reports
+          records:
+            title: Reports
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Reports yet. Click "Add New Report" to add
+              your first report.
+          report:
+            view_live_html: View this report live <br/><em>(opens in a new window)</em>
+            edit: Edit this report
+            delete: Remove this report forever
+        works:
+          actions:
+            create_new: Add New Work
+            reorder: Reorder Works
+            reorder_done: Done Reordering Works
+          records:
+            title: Works
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Works yet. Click "Add New Work" to add your
+              first work.
+          work:
+            view_live_html: View this work live <br/><em>(opens in a new window)</em>
+            edit: Edit this work
+            delete: Remove this work forever
+        students:
+          actions:
+            create_new: Add New Student
+            reorder: Reorder Students
+            reorder_done: Done Reordering Students
+          records:
+            title: Students
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Students yet. Click "Add New Student" to add
+              your first student.
+          student:
+            view_live_html: View this student live <br/><em>(opens in a new window)</em>
+            edit: Edit this student
+            delete: Remove this student forever
+        professions:
+          actions:
+            create_new: Add New Profession
+            reorder: Reorder Professions
+            reorder_done: Done Reordering Professions
+          records:
+            title: Professions
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Professions yet. Click "Add New Profession"
+              to add your first profession.
+          profession:
+            view_live_html: View this profession live <br/><em>(opens in a new window)</em>
+            edit: Edit this profession
+            delete: Remove this profession forever
+        fg:
+          actions:
+            create_new: Add New Fg
+            reorder: Reorder Fgs
+            reorder_done: Done Reordering Fgs
+          records:
+            title: Fgs
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Fgs yet. Click "Add New Fg" to add your first
+              fg.
+          fg:
+            view_live_html: View this fg live <br/><em>(opens in a new window)</em>
+            edit: Edit this fg
+            delete: Remove this fg forever
+      teachers:
+        show:
+          other: Other Teachers
+      reports:
+        show:
+          other: Other Reports
+      works:
+        show:
+          other: Other Works
+      students:
+        show:
+          other: Other Students
+      professions:
+        show:
+          other: Other Professions
+      fg:
+        show:
+          other: Other Fgs
+  activerecord:
+    attributes:
+      refinery/fg/teacher:
+        name: Name
+        title: Title
+        works: Works
+        desc: Desc
+        content: Content
+        avatar: Avatar
+      refinery/fg/report:
+        title: Title
+        desc: Desc
+        content: Content
+        image: Image
+      refinery/fg/work:
+        name: Name
+        desc: Desc
+        content: Content
+        main_image: Main Image
+      refinery/fg/student:
+        name: Name
+        grade: Grade
+        study_class: Study Class
+        course_id: Course
+        interest: Interest
+        tel: Tel
+        job: Job
+        avatar: Avatar
+        feedback: Feedback
+      refinery/fg/profession:
+        name: Name
+        content: Content
+        open_at: Open At
+      refinery/fg/fg:
+        name: Name

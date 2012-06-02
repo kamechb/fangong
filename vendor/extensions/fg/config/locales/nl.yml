@@ -1,0 +1,160 @@
+nl:
+  refinery:
+    plugins:
+      teachers:
+        title: Teachers
+      reports:
+        title: Reports
+      works:
+        title: Works
+      students:
+        title: Students
+      professions:
+        title: Professions
+      fgs:
+        title: Fgs
+    fg:
+      admin:
+        teachers:
+          actions:
+            create_new: Maak een nieuwe Teacher
+            reorder: Wijzig de volgorde van de Teachers
+            reorder_done: Klaar met het wijzingen van de volgorde van de Teachers
+          records:
+            title: Teachers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Teachers. Druk op 'Maak een nieuwe Teacher'
+              om de eerste aan te maken.
+          teacher:
+            view_live_html: Bekijk deze teacher op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze teacher
+            delete: Verwijder deze teacher voor eeuwig
+        reports:
+          actions:
+            create_new: Maak een nieuwe Report
+            reorder: Wijzig de volgorde van de Reports
+            reorder_done: Klaar met het wijzingen van de volgorde van de Reports
+          records:
+            title: Reports
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Reports. Druk op 'Maak een nieuwe Report'
+              om de eerste aan te maken.
+          report:
+            view_live_html: Bekijk deze report op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze report
+            delete: Verwijder deze report voor eeuwig
+        works:
+          actions:
+            create_new: Maak een nieuwe Work
+            reorder: Wijzig de volgorde van de Works
+            reorder_done: Klaar met het wijzingen van de volgorde van de Works
+          records:
+            title: Works
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Works. Druk op 'Maak een nieuwe Work' om
+              de eerste aan te maken.
+          work:
+            view_live_html: Bekijk deze work op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze work
+            delete: Verwijder deze work voor eeuwig
+        students:
+          actions:
+            create_new: Maak een nieuwe Student
+            reorder: Wijzig de volgorde van de Students
+            reorder_done: Klaar met het wijzingen van de volgorde van de Students
+          records:
+            title: Students
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Students. Druk op 'Maak een nieuwe Student'
+              om de eerste aan te maken.
+          student:
+            view_live_html: Bekijk deze student op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze student
+            delete: Verwijder deze student voor eeuwig
+        professions:
+          actions:
+            create_new: Maak een nieuwe Profession
+            reorder: Wijzig de volgorde van de Professions
+            reorder_done: Klaar met het wijzingen van de volgorde van de Professions
+          records:
+            title: Professions
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Professions. Druk op 'Maak een nieuwe Profession'
+              om de eerste aan te maken.
+          profession:
+            view_live_html: Bekijk deze profession op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze profession
+            delete: Verwijder deze profession voor eeuwig
+        fgs:
+          actions:
+            create_new: Maak een nieuwe Fg
+            reorder: Wijzig de volgorde van de Fgs
+            reorder_done: Klaar met het wijzingen van de volgorde van de Fgs
+          records:
+            title: Fgs
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Fgs. Druk op 'Maak een nieuwe Fg' om de
+              eerste aan te maken.
+          fg:
+            view_live_html: Bekijk deze fg op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze fg
+            delete: Verwijder deze fg voor eeuwig
+      teachers:
+        show:
+          other: Andere Teachers
+      reports:
+        show:
+          other: Andere Reports
+      works:
+        show:
+          other: Andere Works
+      students:
+        show:
+          other: Andere Students
+      professions:
+        show:
+          other: Andere Professions
+      fgs:
+        show:
+          other: Andere Fgs
+  activerecord:
+    attributes:
+      refinery/fg/teacher:
+        name: Name
+        title: Title
+        works: Works
+        desc: Desc
+        content: Content
+        avatar: Avatar
+      refinery/fg/report:
+        title: Title
+        desc: Desc
+        content: Content
+        image: Image
+      refinery/fg/work:
+        name: Name
+        desc: Desc
+        content: Content
+        main_image: Main Image
+      refinery/fg/student:
+        name: Name
+        grade: Grade
+        study_class: Study Class
+        course_id: Course
+        interest: Interest
+        tel: Tel
+        job: Job
+        avatar: Avatar
+        feedback: Feedback
+      refinery/fg/profession:
+        name: Name
+        content: Content
+        open_at: Open At
+      refinery/fg/fg:
+        name: Name

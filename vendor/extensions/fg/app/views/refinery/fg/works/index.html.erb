@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="works">
+    <% @works.each do |work| %>
+      <li>
+        <%= link_to work.name, refinery.fg_work_path(work) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
