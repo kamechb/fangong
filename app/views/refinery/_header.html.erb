@@ -1,0 +1,30 @@
+  <div class="container">
+    <div class="row">
+      <div class="span2">  
+        <address>
+          杭州市文晖大桥东蓝天城市花园16幢2单元5楼<br />
+          0571-87175975<br />0571-88039985
+        </address>
+        <div class="bshare-custom">
+          <a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a>
+          <a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a>
+          <a title="分享到人人网" class="bshare-renren" href="javascript:void(0);"></a>
+          <a title="分享到腾讯微博" class="bshare-qqmb" href="javascript:void(0);"></a>
+          <a title="分享到豆瓣" class="bshare-douban" href="javascript:void(0);"></a>
+          <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+          <span class="BSHARE_COUNT bshare-share-count">0</span>
+        </div>            
+      </div>
+      <div class="span8">
+        <a href="index.html" id="logo" ><%= image_tag "top.png", :alt => '凡宫' %></a>
+      </div>
+      <div class="span2">
+
+      </div>
+    </div><!--row-->
+    <%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+  </div>
+

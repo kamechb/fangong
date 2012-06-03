@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120602170811) do
+ActiveRecord::Schema.define(:version => 20120603090831) do
 
   create_table "refinery_fg_professions", :force => true do |t|
     t.string   "name",                          :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120602170811) do
     t.integer  "position"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.boolean  "opened",     :default => true
   end
 
   create_table "refinery_fg_reports", :force => true do |t|

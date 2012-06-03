@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <header id="header">
+      <%= render '/refinery/header' -%>
+    </header>
+    <section id="content">
+      <%= yield %>
+    </section>
+    <footer id="footer">
+      <%= render '/refinery/footer' -%>
+    </footer>
+    <%= render '/refinery/javascripts' %>
+
+    <div id="copyright">
+      <div class="container">
+        <p>
+          <span>COPYRIGHT © 2012  (凡宫造型)<span><a href="/legal/user">服务条款</a></span>|
+          <span><a href="http://support.envato.com/">帮助</a></span>
+        </p>
+        <p class="trademarks">浙ICP备12015390号</p>
+      </div>
+    </div>
+
+  </body>
+</html>

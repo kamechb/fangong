@@ -1,0 +1,225 @@
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <div class="actions row">
+        <a class="pull-left" href="online_register/index.html">在线报名</a>
+        <a class="pull-right" href="online_questions/index.html">在线咨询</a>
+      </div>
+      
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">凡宫学科介绍</span></h3>
+        <div class="box-content">
+        <ul class="nav nav-list courseList">
+        <% @professions.each do |profession| %>
+          <li class="course"><%= link_to profession.name, "#" %></li>
+        <% end %>
+        </ul>
+        </div>
+      </div>        
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">报名须知及注意事项</span></h3>
+        <div class="box-content">
+          <ul class="nav nav-list">
+            <li><a href="#">填写报名表</a></li>
+            <li><a href="#">住宿推荐与预定</a></li>
+            <li><a href="#">入学报名须知</a></li>
+            <li><a href="#">学费优惠制度</a></li>
+            <li><a href="#">关于证书</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">最新开课时间</span></h3>
+        <div class="box-content">
+        <ul class="nav nav-list">
+        <% @open_professions.each do |p| %>
+          <li class="course">
+            <a href="#"><%= p.name%><span class="time"><%= p.open_at%></span></a>
+          </li>
+        <% end %>
+        </ul>
+        </div>
+      </div>    
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">课程推荐</span></h3>
+        <div class="box-content">
+        <ul class="nav nav-list">
+        <% @recommend_professions.each do |p| %>
+          <li><%= link_to p.name, "#" %></li>
+        <% end %>
+        </ul>
+        </div>
+      </div>  
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">学员报名信息</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+        <ul class="students">
+        <% @signup_students.each do |student| %>
+          <li>
+            <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
+            <h4><%= link_to student.name, "#" %><small><%= student.address %></small><br></h4>
+            <small>hello world</small>
+            <p><%= student.profession.name %></p>
+          </li>
+        <% end %>
+        </ul>
+        </div>
+      </div>  <!--well-->    
+      
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">学员反馈</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+        <ul class="students">
+          <% @feedback_students.each do |student| %>
+          <li>
+            <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
+            <h4><%= link_to student.name, "#" %></h4>
+            <p>hello world hello world hello world</p>
+          </li>
+          <% end %>
+        </ul>
+        </div>
+      </div>  <!--well-->  
+  
+
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">求职招聘</span></h3>
+        <div class="box-content">
+          <ul class="nav nav-list">
+            <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+            <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+            <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+            <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+            <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+          </ul>
+        </div>
+      </div>  <!--well-->  
+                            
+    </div>    
+
+    <div class="span9">
+      <div class=" propaganda">
+        <div class="wrapper_slider">
+        <!-- layout slider -->
+          <div class="lay_base slider_pattern"></div>
+          <div class="lay_base slider_shadow"></div>
+          <div class="bar_separate content_separate"></div>
+        <!-- end layout slider -->
+        <div class="slider_area">
+          <div class="slider_content">
+            <div id="slider" class="nivoSlider">  
+              <a href="#"><%= image_tag 'gg1.jpg' %></a>
+              <a href="#"><%= image_tag 'gg2.jpg' %></a>
+              <a href="#"><%= image_tag 'gg3.jpg' %></a>
+              <a href="#"><%= image_tag 'gg4.jpg' %></a>
+              <a href="#"><%= image_tag 'gg5.jpg' %></a>
+            </div>
+          </div><!-- end slider content -->
+        </div><!-- end slider area -->
+        </div><!-- end wrapper slider -->
+      </div><!--well-->  
+            
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">最新资讯</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+          <ul class="row events">
+          <% @reports.each do |report| %>
+            <li class="span4">
+              <a class="pull-left" href="#"><%= image_fu report.image, nil, {:width => 80, :height => 80} %></a>
+              <h4><%= link_to report.title, "#" %><small><%= report.created_at %></small></h4>
+              <p><%= report.desc %></p>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+                  
+      </div>
+    
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">作品展示</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+          <ul class="row thumbnails works">
+          <% @works.each do |work| %>
+            <li>
+              <%= link_to image_fu(work.main_image), "#" %>
+              <p><%= work.desc %></p>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+      </div>  <!--well-->  
+      
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">产品研发</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+          <ul class="row thumbnails works">
+          <% @research_works.each do |work| %>
+            <li>
+              <%= link_to image_fu(work.main_image), "#" %>
+              <p><%= work.desc %></p>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+
+      </div>  <!--well-->    
+
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">学员活动</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+          <ul class="row thumbnails activities">
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/1.jpg"></a>
+              <p>T台平面作品</p>
+            </li>
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/2.jpg"></a>
+              <p>T台平面作品</p>
+            </li>
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/3.jpg"></a>
+              <p>T台平面作品</p>
+            </li>
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/4.jpg"></a>
+              <p>T台平面作品</p>
+            </li>  
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/3.jpg"></a>
+              <p>T台平面作品</p>
+            </li>
+            <li>
+              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/4.jpg"></a>
+              <p>T台平面作品</p>
+            </li>                              
+          </ul>
+        </div>
+      </div>  <!--well-->  
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">凡宫简介</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+        <img width="370px" class="pull-left" src="img/activities/6.jpg"><p></p>
+        <p>凡宫造型培训机构，创立于2008年</p>
+        <p>原张菁化妆培训机构，基于文化理念的提升而更名</p>
+        <p>与北京电影制片厂天宇影视化妆培训学校共同打造浙江最具实力的影视化妆培训机构</p>
+        <p>我们拥有最前线的专业讲师团队</p>
+        
+        <p>我们是时尚领域中充满激情和专业精神的团队</p>
+        <p>我们提供关于化妆的各种知识：美术基础，服装设计，平面设计，色彩搭配，面具文化，影视美学，品牌鉴赏，国际礼仪，古典文化等。。</p>
+        <p>我们的宗旨是打造行业最精英的人士</p>
+        <p>与北京电影制片厂天宇影视化妆培训学校共同打造浙江最具实力的影视化妆培训机构</p>
+        <p>我们拥有最前线的专业讲师团队</p>
+        <p>我们是时尚领域中充满激情和专业精神的团队</p>
+    
+        </div>
+
+        
+      </div>                          
+    </div>
+  </div>
+</div>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'j' %>
+  <%= javascript_include_tag 'jquery.nivo.slider' %>
+<% end %>

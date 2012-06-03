@@ -29,6 +29,13 @@
     </div>
 
   </div>
+
+  <div class='field'>
+    <%= f.label :opened -%>
+    <%= f.radio_button :opened, 1, :checked => @profession.opened %>开课
+    <%= f.radio_button :opened, 0, :checked => !@profession.opened %>不开课
+
+  </div>
   
   <div class='field'>
     <%= f.label :open_at -%>
