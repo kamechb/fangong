@@ -52,3 +52,4 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 
 gem 'refinerycms-fg', :path => 'vendor/extensions'
 gem 'acts-as-taggable-on'
+gem 'cells'

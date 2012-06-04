@@ -1,0 +1,10 @@
+<div class="box sidebar">
+  <h3 class="box-header"><span class="box-title">凡宫学科介绍</span></h3>
+  <div class="box-content">
+  <ul class="nav nav-list courseList">
+  <% @professions.each do |profession| %>
+    <li class="course"><%= link_to profession.name, "#" %></li>
+  <% end %>
+  </ul>
+  </div>
+</div>        

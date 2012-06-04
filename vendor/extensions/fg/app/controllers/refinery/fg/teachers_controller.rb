@@ -26,7 +26,7 @@ module Refinery
       end
 
       def find_page
-        @page = ::Refinery::Page.where(:link_url => "/teachers").first
+        @page = ::Refinery::Page.where(:link_url => "/fg/teachers").first
       end
 
     end

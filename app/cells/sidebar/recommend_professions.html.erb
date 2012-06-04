@@ -1,0 +1,10 @@
+<div class="box sidebar">
+  <h3 class="box-header"><span class="box-title">课程推荐</span></h3>
+  <div class="box-content">
+  <ul class="nav nav-list">
+  <% @recommend_professions.each do |p| %>
+    <li><%= link_to p.name, "#" %></li>
+  <% end %>
+  </ul>
+  </div>
+</div>  

@@ -1,7 +1,7 @@
 Refinery::PagesController.class_eval do
     
-  before_filter :find_all_professions, :find_works, :find_students, :find_reports, :only => [:home]
-
+  before_filter :find_works,  :find_reports, :only => [:home]
+                # :find_all_professions, :find_students,
   protected
         
   def find_all_professions
