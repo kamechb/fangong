@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603090831) do
+ActiveRecord::Schema.define(:version => 20120606122902) do
+
+  create_table "refinery_fg_consults", :force => true do |t|
+    t.string   "user_name"
+    t.string   "user_tel"
+    t.text     "leave_message"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_fg_professions", :force => true do |t|
     t.string   "name",                          :null => false

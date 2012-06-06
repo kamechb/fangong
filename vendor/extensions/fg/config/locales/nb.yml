@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      consults:
+        title: Consults
       teachers:
         title: Teachers
       reports:
@@ -15,6 +17,21 @@ nb:
         title: Fgs
     fg:
       admin:
+        consults:
+          actions:
+            create_new: Lag en ny Consult
+            reorder: Endre rekkefølgen på Consults
+            reorder_done: Ferdig å endre rekkefølgen Consults
+          records:
+            title: Consults
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Consults enda. Klikk på "Lag en ny Consult"
+              for å legge til din første consult.
+          consult:
+            view_live_html: Vis hvordan denne consult ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne consult
+            delete: Fjern denne consult permanent
         teachers:
           actions:
             create_new: Lag en ny Teacher
@@ -105,6 +122,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne fg
             delete: Fjern denne fg permanent
+      consults:
+        show:
+          other: Andre Consults
       teachers:
         show:
           other: Andre Teachers
@@ -125,6 +145,10 @@ nb:
           other: Andre Fgs
   activerecord:
     attributes:
+      refinery/fg/consult:
+        user_name: User Name
+        user_tel: User Tel
+        leave_message: Leave Message
       refinery/fg/teacher:
         name: Name
         title: Title

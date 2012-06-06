@@ -1,0 +1,261 @@
+zh-CN:
+  refinery:
+    plugins:
+      consults:
+        title: 留言咨询
+      teachers:
+        title: 教师
+      reports:
+        title: 资讯
+      works:
+        title: 作品
+      students:
+        title: 学生
+      professions:
+        title: 专业
+      fg:
+        title: 凡宫
+    fg:
+      admin:
+        consults:
+          actions:
+            create_new: 新建留言咨询 
+            reorder: 排序留言咨询 
+            reorder_done: 留言咨询排序完成 
+          records:
+            title: 留言咨询
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有留言咨询. 单击 "新建留言咨询" 添加第一个留言咨询
+          consult:
+            view_live_html: 查看留言咨询 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该留言咨询 
+            delete: 删除该留言咨询 
+        teachers:
+          actions:
+            create_new: 新建教师 
+            reorder: 排序教师 
+            reorder_done: 教师排序完成 
+          records:
+            title: 教师
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有教师. 单击 "新建教师" 添加第一个教师
+          teacher:
+            view_live_html: 查看教师 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该教师 
+            delete: 删除该教师 
+        reports:
+          actions:
+            create_new: 添加资讯
+            reorder: 排序资讯 
+            reorder_done: 资讯排序完成
+          records:
+            title: 资讯
+            sorry_no_results: 对不起!没有结果
+            no_items_yet: 还没有资讯. 单击 "新建资讯" 添加第一个资讯
+          report:
+            view_live_html: 查看资讯 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该资讯
+            delete: 删除该资讯
+        works:
+          actions:
+            create_new: 添加作品
+            reorder: 排序作品 
+            reorder_done: 作品排序完成
+          records:
+            title: 作品
+            sorry_no_results: 对不起!没有结果
+            no_items_yet: 还没有作品. 单击 "新建作品" 添加第一个作品
+          work:
+            view_live_html: 查看作品 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该作品
+            delete: 删除该作品
+        students:
+          actions:
+            create_new: 添加学生
+            reorder: 排序学生 
+            reorder_done: 学生排序完成
+          records:
+            title: 学生
+            sorry_no_results: 对不起!没有结果
+            no_items_yet: 还没有学生. 单击 "新建学生" 添加第一个学生
+          student:
+            view_live_html: 查看学生 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该学生
+            delete: 删除该学生
+        professions:
+          actions:
+            create_new: 添加专业
+            reorder: 排序专业 
+            reorder_done: 专业排序完成
+          records:
+            title: 专业
+            sorry_no_results: 对不起!没有结果
+            no_items_yet: 还没有专业. 单击 "新建专业" 添加第一个专业
+          profession:
+            view_live_html: 查看专业 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该专业
+            delete: 删除该专业
+      teachers:
+        show:
+          other: 其他教师 
+      reports:
+        show:
+          other: 其他资讯
+      works:
+        show:
+          other: 其他作品
+      students:
+        show:
+          other: 其他学生
+      professions:
+        show:
+          other: 其他专业
+  activerecord:
+    attributes:
+      refinery/fg/consult:
+        user_name: 姓名
+        user_tel: 联系电话
+        leave_message: 留言
+      refinery/fg/teacher:
+        name: 姓名
+        title: 头衔
+        works: 作品
+        desc: 简单介绍
+        content: 详细介绍
+        avatar: 头像
+      refinery/fg/report:
+        title: 标题
+        desc: 描述
+        content: 内容
+        image: 图片
+      refinery/fg/work:
+        name: 名称
+        desc: 描述
+        content: 详细内容
+        main_image: 代表图片 
+      refinery/fg/student:
+        name: 姓名
+        grade: 年级
+        study_class: 班级
+        profession_id: 专业
+        interest: 兴趣爱好
+        tel: 联系方式
+        job: 就职工作
+        avatar: 头像
+        feedback: 反馈
+      refinery/fg/profession:
+        name: 名称
+        content: 详细内容
+        open_at: 开课时间
+    errors:
+      template: # ~ 2.3.5 backward compatible
+        header:
+          one: "有 1 个错误发生导致「%{model}」无法被保存。"
+          other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
+        body: "如下字段出现错误："
+      full_messages:
+        format: "%{attribute} %{message}"
+      messages:
+        inclusion: "不包含于列表中"
+        exclusion: "是保留关键字"
+        invalid: "是无效的"
+        confirmation: "与确认值不匹配"
+        accepted: "必须是可被接受的"
+        empty: "不能留空"
+        blank: "不能为空字符"
+        too_long: "过长（最长为 %{count} 个字符）"
+        too_short: "过短（最短为 %{count} 个字符）"
+        wrong_length: "长度非法（必须为 %{count} 个字符）"
+        not_a_number: "不是数字"
+        not_an_integer: "必须是整数"
+        greater_than: "必须大于 %{count}"
+        greater_than_or_equal_to: "必须大于或等于 %{count}"
+        equal_to: "必须等于 %{count}"
+        less_than: "必须小于 %{count}"
+        less_than_or_equal_to: "必须小于或等于 %{count}"
+        odd: "必须为单数"
+        even: "必须为双数"
+        taken: "已经被使用"
+        record_invalid: "校验失败: %{errors}"
+
+  activemodel:
+    errors:
+      template:
+        header:
+          one: "有 1 个错误发生导致「%{model}」无法被保存。"
+          other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
+        body: "如下字段出现错误："
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      inclusion: "不包含于列表中"
+      exclusion: "是保留关键字"
+      invalid: "是无效的"
+      confirmation: "与确认值不匹配"
+      accepted: "必须是可被接受的"
+      empty: "不能留空"
+      blank: "不能为空字符"
+      too_long: "过长（最长为 %{count} 个字符）"
+      too_short: "过短（最短为 %{count} 个字符）"
+      wrong_length: "长度非法（必须为 %{count} 个字符）"
+      not_a_number: "不是数字"
+      not_an_integer: "必须是整数"
+      greater_than: "必须大于 %{count}"
+      greater_than_or_equal_to: "必须大于或等于 %{count}"
+      equal_to: "必须等于 %{count}"
+      less_than: "必须小于 %{count}"
+      less_than_or_equal_to: "必须小于或等于 %{count}"
+      odd: "必须为单数"
+      even: "必须为双数"
+  flash:
+    student_signup:
+      success: 报名成功
+      failure: 报名失败
+    consult:
+      success: 留言成功
+      failure: 留言失败
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "半分钟前"
+      less_than_x_seconds:
+        one:   "1秒前"
+        other: "%{count}秒前"
+      x_seconds:
+        one:   "1秒前"
+        other: "%{count}秒前"
+      less_than_x_minutes:
+        one:   "1分钟前"
+        other: "%{count}分钟前"
+      x_minutes:
+        one:   "1分钟前"
+        other: "%{count}分钟前"
+      about_x_hours:
+        one:   "1小时前"
+        other: "%{count}小时前"
+      x_days:
+        one:   "1天"
+        other: "%{count}天前"
+      about_x_months:
+        one:   "1个月前"
+        other: "%{count}个月前"
+      x_months:
+        one:   "1个月前"
+        other: "%{count}个月前"
+      about_x_years:
+        one:   "1年前"
+        other: "%{count}年前"
+      over_x_years:
+        one:   "1年前"
+        other: "%{count}年前"
+      almost_x_years:
+        one:   "1年前"
+        other: "%{count}年前"
+    prompts:
+      year:   "年"
+      month:  "月"
+      day:    "日"
+      hour:   "小时"
+      minute: "分钟"
+      second: "秒"

@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>  
+    <div class="span9">
+      <div class="well">
+        
+        <%= form_for @consult, :url => refinery.fg_consults_path, :html => {:class => "form-horizontal"}, :method => :post do |f| %>
+          <fieldset>
+            <legend>
+              <h1>在线咨询</h1>
+              <p>我们愿意与您一起分享我们所了解的一切，也请你与我们分享你所期待的，选择沟通，凡宫是你最可靠的伙伴！同样，你也可以直接拨打中赫时尚为你特别准备的咨0571-87175975 0571-88039985，我们的咨询老师将针对你的问题进行详细解答。</p>
+              <p class="success notice"><%= flash[:notice]%></p>
+              <div class="error">
+                <% @consult.errors.full_messages.each do |msg| %>
+                  <p><%= msg%></p>
+                <% end %>
+              </div>
+            </legend>
+            <div class="control-group">
+              <%= f.label :user_name, "姓名", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :user_name, :class => "input-xlarge" %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :user_tel, "联系电话", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :user_tel, :class => "input-xlarge" %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :leave_message, "留言", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_area :leave_message, :rows => 5, :cols => 5, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="form-actions">
+              <%= f.submit "提交", :class => "btn btn-success" %>
+              <button class="btn" type="reset">重写</button>
+            </div>                                          
+          </fieldset>
+          
+        <% end %>
+      </div>
+      <div class="leaveContainer well">
+        <ul id="leaveList">
+        <% @consults.each do |consult| %>
+          <li>
+            <p>
+              <span><%= consult.user_name %>:</span>
+              <%= consult.leave_message %> 
+              <small><%= time_ago_in_words(consult.created_at) %></small>
+            </p>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>  
+  </div>
+</div>

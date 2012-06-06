@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(consult) -%>">
+  <span class='title'>
+    <%= consult.user_name %>:
+    <%= truncate(consult.leave_message, :length => 30)%>
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.fg_consult_path(consult),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_fg_admin_consult_path(consult),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.fg_admin_consult_path(consult),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => consult.user_name),
+        :method => :delete %>
+  </span>
+</li>

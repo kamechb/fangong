@@ -951,3 +951,11 @@ margin-left: 3px;
  .work .imageContainer img{
  	width: 560px; 
  }*/
+
+
+.error {
+  color: red;
+}
+.success, .notice {
+  color: green;
+}

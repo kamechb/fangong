@@ -1,0 +1,36 @@
+<%= form_for [refinery, :fg_admin, @consult] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @consult,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :user_name -%>
+    <%= f.text_field :user_name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :user_tel -%>
+    <%= f.text_field :user_tel  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :leave_message -%>
+    <%= f.text_area :leave_message, :class => "larger widest"  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.consults.admin.consults.consult'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @consult.user_name) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

@@ -70,6 +70,19 @@ module Refinery
         end
       end
 
+      initializer "register refinerycms_consults plugin" do
+        Refinery::Plugin.register do |plugin|
+          plugin.name = "consults"
+          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.fg_admin_consults_path }
+          plugin.pathname = root
+          plugin.activity = {
+            :class_name => :'refinery/fg/consult',
+            :title => 'user_name'
+          }
+          plugin.menu_match = %r{refinery/fg/consults(/.*)?$}
+        end
+      end
+
 
       config.after_initialize do
         Refinery.register_extension(Refinery::Fg)
@@ -78,6 +91,7 @@ module Refinery
         # Refinery.register_extension(Refinery::Works)
         # Refinery.register_extension(Refinery::Reports)
         # Refinery.register_extension(Refinery::Teachers)
+        # Refinery.register_extension(Refinery::Consults)
       end
     end
   end

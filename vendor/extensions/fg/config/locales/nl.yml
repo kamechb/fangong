@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      consults:
+        title: Consults
       teachers:
         title: Teachers
       reports:
@@ -15,6 +17,21 @@ nl:
         title: Fgs
     fg:
       admin:
+        consults:
+          actions:
+            create_new: Maak een nieuwe Consult
+            reorder: Wijzig de volgorde van de Consults
+            reorder_done: Klaar met het wijzingen van de volgorde van de Consults
+          records:
+            title: Consults
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Consults. Druk op 'Maak een nieuwe Consult'
+              om de eerste aan te maken.
+          consult:
+            view_live_html: Bekijk deze consult op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze consult
+            delete: Verwijder deze consult voor eeuwig
         teachers:
           actions:
             create_new: Maak een nieuwe Teacher
@@ -105,6 +122,9 @@ nl:
               venster)</em>
             edit: Bewerk deze fg
             delete: Verwijder deze fg voor eeuwig
+      consults:
+        show:
+          other: Andere Consults
       teachers:
         show:
           other: Andere Teachers
@@ -125,6 +145,10 @@ nl:
           other: Andere Fgs
   activerecord:
     attributes:
+      refinery/fg/consult:
+        user_name: User Name
+        user_tel: User Tel
+        leave_message: Leave Message
       refinery/fg/teacher:
         name: Name
         title: Title

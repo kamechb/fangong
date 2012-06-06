@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      consults:
+        title: Consults
       teachers:
         title: Teachers
       reports:
@@ -15,6 +17,21 @@ es:
         title: Fgs
     fg:
       admin:
+        consults:
+          actions:
+            create_new: Crear nuevo consult
+            reorder: Reordenar consults
+            reorder_done: Reordenación de consults completada
+          records:
+            title: Consults
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay consults todavía. Pulsa en "Crear nuevo Consult"
+              para crear tu primer consult.
+          consult:
+            view_live_html: Ver este consult como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este consult
+            delete: Borrar este consult para siempre
         teachers:
           actions:
             create_new: Crear nuevo teacher
@@ -105,6 +122,9 @@ es:
               ventana nueva)</em>
             edit: Editar este fg
             delete: Borrar este fg para siempre
+      consults:
+        show:
+          other: Otros consults
       teachers:
         show:
           other: Otros teachers
@@ -125,6 +145,10 @@ es:
           other: Otros fgs
   activerecord:
     attributes:
+      refinery/fg/consult:
+        user_name: User Name
+        user_tel: User Tel
+        leave_message: Leave Message
       refinery/fg/teacher:
         name: Name
         title: Title

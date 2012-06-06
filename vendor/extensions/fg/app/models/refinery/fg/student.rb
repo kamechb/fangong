@@ -8,7 +8,7 @@ module Refinery
 
       acts_as_indexed :fields => [:name]
 
-      validates :name, :presence => true, :uniqueness => true
+      validates :name, :profession, :tel, :presence => true
       validates :know_from, :numericality => true
 
       belongs_to :avatar, :class_name => '::Refinery::Image'

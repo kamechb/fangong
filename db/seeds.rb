@@ -11,5 +11,3 @@ Refinery::Pages::Engine.load_seed
 
 Refinery::Fg::Engine.load_seed
 
-# Added by Refinery CMS Fgs extension
-Refinery::Fg::Engine.load_seed

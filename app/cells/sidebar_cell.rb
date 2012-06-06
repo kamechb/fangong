@@ -2,6 +2,14 @@ class SidebarCell < Cell::Rails
   helper Rails.application.helpers
   helper Refinery::Core::Engine.helpers
 
+  # cache :online
+  # cache :professions
+  # cache :signup_note
+  # cache :open_professions
+  # cache :recommend_professions
+  # cache :signup_students
+  # cache :students_feedback
+
   def all
     render
   end

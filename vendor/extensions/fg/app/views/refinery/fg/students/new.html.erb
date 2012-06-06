@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>  
+    <div class="span9">
+      <div class="well">
+        
+        <%= form_for @student, :url => refinery.fg_students_path, :html => {:class => "form-horizontal"}, :method => :post do |f| %>
+          <fieldset>
+            <legend>
+              <h1>在线报名</h1>
+              <p>请您将自己的资料尽最大可能填写详细，以便我们的工作人员可以在第一时间与你取得必要的联系。一切有关您的信息，中赫时尚将严格管理保存，保护您的权益。</p>
+              <p class="success notice"><%= flash[:notice]%></p>
+              <div class="error">
+                <% @student.errors.full_messages.each do |msg| %>
+                  <p><%= msg%></p>
+                <% end %>
+              </div>
+            </legend>
+            <div class="control-group">
+              <%= f.label :profession_id, "选择课程", :class => "control-label" %>
+              <div class="controls">
+                <%= f.select :profession_id, @professions.map { |p|[p.name, p.id] }, :id => 'via' %>
+              </div>                  
+            </div>                  
+            <div class="control-group">
+              <%= f.label :name, "姓名", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :name, :class => "input-xlarge" %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :email, "电子邮件", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :email, :class => "input-xlarge" %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :qq, "QQ", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :qq, :class => "input-xlarge" %>
+              </div>
+            </div>        
+            <div class="control-group">
+              <%= f.label :msn, "MSN", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :msn, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="control-group">
+              <%= f.label :tel, "联系电话", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :tel, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="control-group">
+              <%= f.label :address, "目前所在地", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :address, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="control-group">
+              <%= f.label :staying, "住宿预定", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_field :staying, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="control-group">
+              <%= f.label :know_from, "得知渠道", :class => "control-label" %>
+              <div class="controls">
+                <%= f.select :know_from, map_number_select(Refinery::Fg::Student::KNOW_FROMS) %>
+              </div>                  
+            </div>                  
+            <div class="control-group">
+              <%= f.label :leave_message, "留言", :class => "control-label" %>
+              <div class="controls">
+                <%= f.text_area :leave_message, :rows => 5, :cols => 5, :class => "input-xlarge" %>
+              </div>
+            </div>                            
+            <div class="form-actions">
+              <%= f.submit "提交", :class => "btn btn-success" %>
+              <button class="btn" type="reset">重写</button>
+            </div>                                          
+          </fieldset>
+          
+        <% end %>
+      </div>
+    </div>  
+  </div>
+</div>

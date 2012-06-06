@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @consult.user_name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>User Name</h1>
+    <p>
+      <%=raw @consult.user_name %>
+    </p>
+  </section>
+  <section>
+    <h1>User Tel</h1>
+    <p>
+      <%=raw @consult.user_tel %>
+    </p>
+  </section>
+  <section>
+    <h1>Leave Message</h1>
+    <p>
+      <%=raw @consult.leave_message %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="consults">
+      <% @consults.each do |consult| %>
+        <li>
+          <%= link_to consult.user_name, refinery.fg_consult_path(consult) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

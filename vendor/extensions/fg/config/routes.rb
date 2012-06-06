@@ -19,7 +19,7 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :fg do
-    resources :students, :only => [:index, :show]
+    resources :students, :only => [:index, :show, :new, :create]
   end
 
   # Admin routes
@@ -77,6 +77,23 @@ Refinery::Core::Engine.routes.append do
   namespace :fg, :path => '' do
     namespace :admin, :path => 'refinery/fg' do
       resources :teachers, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
+
+  # Frontend routes
+  namespace :fg do
+    resources :consults, :only => [:index, :show, :new, :create]
+  end
+
+  # Admin routes
+  namespace :fg, :path => '' do
+    namespace :admin, :path => 'refinery/fg' do
+      resources :consults, :except => :show do
         collection do
           post :update_positions
         end
