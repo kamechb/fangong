@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      jobs:
+        title: 求职招聘
       consults:
         title: 留言咨询
       teachers:
@@ -17,6 +19,19 @@ zh-CN:
         title: 凡宫
     fg:
       admin:
+        jobs:
+          actions:
+            create_new: 新建求职招聘 
+            reorder: 排序求职招聘 
+            reorder_done: 求职招聘排序完成 
+          records:
+            title: 求职招聘
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有求职招聘. 单击 "新建求职招聘" 添加第一个求职招聘
+          job:
+            view_live_html: 查看求职招聘 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该求职招聘 
+            delete: 删除该求职招聘 
         consults:
           actions:
             create_new: 新建留言咨询 
@@ -112,6 +127,11 @@ zh-CN:
           other: 其他专业
   activerecord:
     attributes:
+      refinery/fg/job:
+        name: 职位
+        company_name: 公司
+        desc: 简单职位描述
+        content: 职位详细描述
       refinery/fg/consult:
         user_name: 姓名
         user_tel: 联系电话

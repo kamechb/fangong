@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      jobs:
+        title: Jobs
       consults:
         title: Consults
       teachers:
@@ -17,6 +19,21 @@ nb:
         title: Fgs
     fg:
       admin:
+        jobs:
+          actions:
+            create_new: Lag en ny Job
+            reorder: Endre rekkefølgen på Jobs
+            reorder_done: Ferdig å endre rekkefølgen Jobs
+          records:
+            title: Jobs
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Jobs enda. Klikk på "Lag en ny Job" for å legge
+              til din første job.
+          job:
+            view_live_html: Vis hvordan denne job ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne job
+            delete: Fjern denne job permanent
         consults:
           actions:
             create_new: Lag en ny Consult
@@ -122,6 +139,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne fg
             delete: Fjern denne fg permanent
+      jobs:
+        show:
+          other: Andre Jobs
       consults:
         show:
           other: Andre Consults
@@ -145,6 +165,11 @@ nb:
           other: Andre Fgs
   activerecord:
     attributes:
+      refinery/fg/job:
+        name: Name
+        company_name: Company Name
+        desc: Desc
+        content: Content
       refinery/fg/consult:
         user_name: User Name
         user_tel: User Tel

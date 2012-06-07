@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      jobs:
+        title: Jobs
       consults:
         title: Consults
       teachers:
@@ -17,6 +19,21 @@ es:
         title: Fgs
     fg:
       admin:
+        jobs:
+          actions:
+            create_new: Crear nuevo job
+            reorder: Reordenar jobs
+            reorder_done: Reordenación de jobs completada
+          records:
+            title: Jobs
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay jobs todavía. Pulsa en "Crear nuevo Job" para crear
+              tu primer job.
+          job:
+            view_live_html: Ver este job como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este job
+            delete: Borrar este job para siempre
         consults:
           actions:
             create_new: Crear nuevo consult
@@ -122,6 +139,9 @@ es:
               ventana nueva)</em>
             edit: Editar este fg
             delete: Borrar este fg para siempre
+      jobs:
+        show:
+          other: Otros jobs
       consults:
         show:
           other: Otros consults
@@ -145,6 +165,11 @@ es:
           other: Otros fgs
   activerecord:
     attributes:
+      refinery/fg/job:
+        name: Name
+        company_name: Company Name
+        desc: Desc
+        content: Content
       refinery/fg/consult:
         user_name: User Name
         user_tel: User Tel

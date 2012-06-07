@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      jobs:
+        title: Jobs
       consults:
         title: Consults
       teachers:
@@ -17,6 +19,20 @@ en:
         title: Fg
     fg:
       admin:
+        jobs:
+          actions:
+            create_new: Add New Job
+            reorder: Reorder Jobs
+            reorder_done: Done Reordering Jobs
+          records:
+            title: Jobs
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Jobs yet. Click "Add New Job" to add your first
+              job.
+          job:
+            view_live_html: View this job live <br/><em>(opens in a new window)</em>
+            edit: Edit this job
+            delete: Remove this job forever
         consults:
           actions:
             create_new: Add New Consult
@@ -115,6 +131,9 @@ en:
             view_live_html: View this fg live <br/><em>(opens in a new window)</em>
             edit: Edit this fg
             delete: Remove this fg forever
+      jobs:
+        show:
+          other: Other Jobs
       consults:
         show:
           other: Other Consults
@@ -138,6 +157,11 @@ en:
           other: Other Fgs
   activerecord:
     attributes:
+      refinery/fg/job:
+        name: Name
+        company_name: Company Name
+        desc: Desc
+        content: Content
       refinery/fg/consult:
         user_name: User Name
         user_tel: User Tel

@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      jobs:
+        title: Jobs
       consults:
         title: Consults
       teachers:
@@ -17,6 +19,21 @@ nl:
         title: Fgs
     fg:
       admin:
+        jobs:
+          actions:
+            create_new: Maak een nieuwe Job
+            reorder: Wijzig de volgorde van de Jobs
+            reorder_done: Klaar met het wijzingen van de volgorde van de Jobs
+          records:
+            title: Jobs
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Jobs. Druk op 'Maak een nieuwe Job' om
+              de eerste aan te maken.
+          job:
+            view_live_html: Bekijk deze job op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze job
+            delete: Verwijder deze job voor eeuwig
         consults:
           actions:
             create_new: Maak een nieuwe Consult
@@ -122,6 +139,9 @@ nl:
               venster)</em>
             edit: Bewerk deze fg
             delete: Verwijder deze fg voor eeuwig
+      jobs:
+        show:
+          other: Andere Jobs
       consults:
         show:
           other: Andere Consults
@@ -145,6 +165,11 @@ nl:
           other: Andere Fgs
   activerecord:
     attributes:
+      refinery/fg/job:
+        name: Name
+        company_name: Company Name
+        desc: Desc
+        content: Content
       refinery/fg/consult:
         user_name: User Name
         user_tel: User Tel

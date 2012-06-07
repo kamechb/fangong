@@ -42,3 +42,15 @@ Refinery::Images.configure do |config|
   # config.trust_file_extensions = false
 
 end
+
+Refinery::ImageHelper.module_eval do
+  def image_fu(image, geometry = nil, options={})
+    if image.present?
+      # dimensions = (image.thumbnail_dimensions(geometry) rescue {})
+
+      image_tag(image.thumbnail(geometry).url, {
+        :alt => image.respond_to?(:title) ? image.title : image.image_name,
+      }.merge(options))
+    end
+  end
+end
