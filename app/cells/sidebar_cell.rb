@@ -38,7 +38,7 @@ class SidebarCell < Cell::Rails
   end
 
   def signup_students
-    @signup_students = Refinery::Fg::Student.order("created_at DESC").limit(8)  # 这里需要该为报名的学生 order("created_at DESC").limit(8)
+    @signup_students = Refinery::Fg::Student.order("created_at DESC").limit(5)  # 这里需要该为报名的学生 order("created_at DESC").limit(8)
     render
   end
 
@@ -48,6 +48,7 @@ class SidebarCell < Cell::Rails
   end
 
   def jobs
+    @jobs = Refinery::Fg::Job.limit(5)
     render
   end
 

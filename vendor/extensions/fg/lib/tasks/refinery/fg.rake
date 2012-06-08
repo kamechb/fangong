@@ -2,7 +2,7 @@ namespace :refinery do
 
   namespace :fg do
 
-    # call this task by running: rake refinery:fgs:my_task
+    # call this task by running: rake refinery:fg:my_task
     # desc "Description of my task below"
     # task :my_task => :environment do
     #   # add your logic here

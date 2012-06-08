@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      activities:
+        title: Activities
       jobs:
         title: Jobs
       consults:
@@ -19,6 +21,21 @@ nl:
         title: Fgs
     fg:
       admin:
+        activities:
+          actions:
+            create_new: Maak een nieuwe Activity
+            reorder: Wijzig de volgorde van de Activities
+            reorder_done: Klaar met het wijzingen van de volgorde van de Activities
+          records:
+            title: Activities
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Activities. Druk op 'Maak een nieuwe Activity'
+              om de eerste aan te maken.
+          activity:
+            view_live_html: Bekijk deze activity op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze activity
+            delete: Verwijder deze activity voor eeuwig
         jobs:
           actions:
             create_new: Maak een nieuwe Job
@@ -139,6 +156,9 @@ nl:
               venster)</em>
             edit: Bewerk deze fg
             delete: Verwijder deze fg voor eeuwig
+      activities:
+        show:
+          other: Andere Activities
       jobs:
         show:
           other: Andere Jobs
@@ -165,6 +185,11 @@ nl:
           other: Andere Fgs
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: Title
+        main_image: Main Image
+        desc: Desc
+        content: Content
       refinery/fg/job:
         name: Name
         company_name: Company Name

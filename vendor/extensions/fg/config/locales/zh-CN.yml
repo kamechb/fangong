@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      activities:
+        title: 活动
       jobs:
         title: 求职招聘
       consults:
@@ -19,6 +21,19 @@ zh-CN:
         title: 凡宫
     fg:
       admin:
+        activities:
+          actions:
+            create_new: 新建活动 
+            reorder: 排序活动 
+            reorder_done: 活动排序完成 
+          records:
+            title: 活动
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有活动. 单击 "新建活动" 添加第一个活动
+          activity:
+            view_live_html: 查看活动 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该活动 
+            delete: 删除该活动 
         jobs:
           actions:
             create_new: 新建求职招聘 
@@ -127,6 +142,11 @@ zh-CN:
           other: 其他专业
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: 活动主题
+        main_image: 主要图片
+        desc: 简单描述
+        content: 详细内容
       refinery/fg/job:
         name: 职位
         company_name: 公司

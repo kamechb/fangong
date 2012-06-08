@@ -2,11 +2,9 @@
   <h3 class="box-header"><span class="box-title">求职招聘</span></h3>
   <div class="box-content">
     <ul class="nav nav-list">
-      <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
-      <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
-      <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
-      <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
-      <li><a href="#">武汉市江岸区苏菲雅摄影会所:化妆师</a></li>
+    <% @jobs.each do |job| %>
+      <li><%= link_to "#{job.company_name}: #{job.name}", "#" %></li>
+    <% end %>
     </ul>
   </div>
 </div>  <!--well-->  

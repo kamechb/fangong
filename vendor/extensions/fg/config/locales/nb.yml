@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      activities:
+        title: Activities
       jobs:
         title: Jobs
       consults:
@@ -19,6 +21,21 @@ nb:
         title: Fgs
     fg:
       admin:
+        activities:
+          actions:
+            create_new: Lag en ny Activity
+            reorder: Endre rekkefølgen på Activities
+            reorder_done: Ferdig å endre rekkefølgen Activities
+          records:
+            title: Activities
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Activities enda. Klikk på "Lag en ny Activity"
+              for å legge til din første activity.
+          activity:
+            view_live_html: Vis hvordan denne activity ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne activity
+            delete: Fjern denne activity permanent
         jobs:
           actions:
             create_new: Lag en ny Job
@@ -139,6 +156,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne fg
             delete: Fjern denne fg permanent
+      activities:
+        show:
+          other: Andre Activities
       jobs:
         show:
           other: Andre Jobs
@@ -165,6 +185,11 @@ nb:
           other: Andre Fgs
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: Title
+        main_image: Main Image
+        desc: Desc
+        content: Content
       refinery/fg/job:
         name: Name
         company_name: Company Name

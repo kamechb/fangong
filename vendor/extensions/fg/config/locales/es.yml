@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      activities:
+        title: Activities
       jobs:
         title: Jobs
       consults:
@@ -19,6 +21,21 @@ es:
         title: Fgs
     fg:
       admin:
+        activities:
+          actions:
+            create_new: Crear nuevo activity
+            reorder: Reordenar activities
+            reorder_done: Reordenación de activities completada
+          records:
+            title: Activities
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay activities todavía. Pulsa en "Crear nuevo Activity"
+              para crear tu primer activity.
+          activity:
+            view_live_html: Ver este activity como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este activity
+            delete: Borrar este activity para siempre
         jobs:
           actions:
             create_new: Crear nuevo job
@@ -139,6 +156,9 @@ es:
               ventana nueva)</em>
             edit: Editar este fg
             delete: Borrar este fg para siempre
+      activities:
+        show:
+          other: Otros activities
       jobs:
         show:
           other: Otros jobs
@@ -165,6 +185,11 @@ es:
           other: Otros fgs
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: Title
+        main_image: Main Image
+        desc: Desc
+        content: Content
       refinery/fg/job:
         name: Name
         company_name: Company Name

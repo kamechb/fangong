@@ -4,7 +4,9 @@ module Refinery
       class ProfessionsController < ::Refinery::AdminController
 
         crudify :'refinery/fg/profession',
-                :title_attribute => 'name', :xhr_paging => true
+                :title_attribute => 'name', 
+                :order => "created_at DESC",
+                :xhr_paging => true
 
       end
     end

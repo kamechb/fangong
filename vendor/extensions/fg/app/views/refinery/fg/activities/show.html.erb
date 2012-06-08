@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @activity.desc %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @activity.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Main Image</h1>
+    <p>
+      <%= image_fu @activity.main_image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Desc</h1>
+    <p>
+      <%=raw @activity.desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @activity.content %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="activities">
+      <% @activities.each do |activity| %>
+        <li>
+          <%= link_to activity.desc, refinery.fg_activity_path(activity) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

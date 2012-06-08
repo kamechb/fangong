@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      activities:
+        title: Activities
       jobs:
         title: Jobs
       consults:
@@ -19,6 +21,20 @@ fr:
         title: Fgs
     fg:
       admin:
+        activities:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Activity
+            reorder: Réordonner les Activities
+            reorder_done: Fin de réordonnancement des Activities
+          records:
+            title: Activities
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Activity. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Activity" pour créer votre premi(er/ère) activity.
+          activity:
+            view_live_html: Voir ce(t/tte) activity <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) activity
+            delete: Supprimer définitivement ce(t/tte) activity
         jobs:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Job
@@ -132,6 +148,9 @@ fr:
             view_live_html: Voir ce(t/tte) fg <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) fg
             delete: Supprimer définitivement ce(t/tte) fg
+      activities:
+        show:
+          other: Autres Activities
       jobs:
         show:
           other: Autres Jobs
@@ -158,6 +177,11 @@ fr:
           other: Autres Fgs
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: Title
+        main_image: Main Image
+        desc: Desc
+        content: Content
       refinery/fg/job:
         name: Name
         company_name: Company Name

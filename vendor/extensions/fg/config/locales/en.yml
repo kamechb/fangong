@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      activities:
+        title: Activities
       jobs:
         title: Jobs
       consults:
@@ -19,6 +21,20 @@ en:
         title: Fg
     fg:
       admin:
+        activities:
+          actions:
+            create_new: Add New Activity
+            reorder: Reorder Activities
+            reorder_done: Done Reordering Activities
+          records:
+            title: Activities
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Activities yet. Click "Add New Activity" to
+              add your first activity.
+          activity:
+            view_live_html: View this activity live <br/><em>(opens in a new window)</em>
+            edit: Edit this activity
+            delete: Remove this activity forever
         jobs:
           actions:
             create_new: Add New Job
@@ -131,6 +147,9 @@ en:
             view_live_html: View this fg live <br/><em>(opens in a new window)</em>
             edit: Edit this fg
             delete: Remove this fg forever
+      activities:
+        show:
+          other: Other Activities
       jobs:
         show:
           other: Other Jobs
@@ -157,6 +176,11 @@ en:
           other: Other Fgs
   activerecord:
     attributes:
+      refinery/fg/activity:
+        title: Title
+        main_image: Main Image
+        desc: Desc
+        content: Content
       refinery/fg/job:
         name: Name
         company_name: Company Name

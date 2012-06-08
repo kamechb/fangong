@@ -4,7 +4,9 @@ module Refinery
       class TeachersController < ::Refinery::AdminController
 
         crudify :'refinery/fg/teacher',
-                :title_attribute => 'name', :xhr_paging => true
+                :title_attribute => 'name', 
+                :order => "created_at DESC",
+                :xhr_paging => true
 
       end
     end
