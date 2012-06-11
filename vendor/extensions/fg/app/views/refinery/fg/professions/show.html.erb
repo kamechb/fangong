@@ -1,45 +1,22 @@
-<% content_for :body_content_title do %>
-  <%= @profession.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :online %> 
+      <%= render_cell :sidebar, :professions %>
+      <%= render_cell :sidebar, :signup_note %>
+      <%= render_cell :sidebar, :open_professions %>
+    </div>    
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @profession.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Content</h1>
-    <p>
-      <%=raw @profession.content %>
-    </p>
-  </section>
-  <section>
-    <h1>Open At</h1>
-    <p>
-      <%=raw @profession.open_at %>
-    </p>
-  </section>
-  <section>
-    <h1>Recommend</h1>
-    <p>
-      <%=raw @profession.recommend %>
-    </p>
-  </section>
-<% end %>
+    <div class="span9">
+      <div class='well course'>
+        <div class="page-header">
+          <h1><%= @profession.name %></h1>
+          <div>
+            <%= raw @profession.content %>
+          </div>
+        </div>
+      </div>
 
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="professions">
-      <% @professions.each do |profession| %>
-        <li>
-          <%= link_to profession.name, refinery.fg_profession_path(profession) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+    </div>
+  </div>
+</div>

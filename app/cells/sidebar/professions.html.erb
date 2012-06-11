@@ -3,7 +3,7 @@
   <div class="box-content">
   <ul class="nav nav-list courseList">
   <% @professions.each do |profession| %>
-    <li class="course"><%= link_to profession.name, "#" %></li>
+    <li class="course"><%= link_to profession.name, refinery.fg_profession_path(profession) %></li>
   <% end %>
   </ul>
   </div>

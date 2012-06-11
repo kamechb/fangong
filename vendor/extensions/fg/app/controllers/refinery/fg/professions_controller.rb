@@ -2,13 +2,15 @@ module Refinery
   module Fg
     class ProfessionsController < ::ApplicationController
 
-      before_filter :find_all_professions
+      # before_filter :find_all_professions
       before_filter :find_page
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @profession in the line below:
         present(@page)
+        @profession = Profession.first
+        render :show
       end
 
       def show
