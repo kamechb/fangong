@@ -3,4 +3,5 @@ class FgController < ApplicationController
     @page = ::Refinery::Page.where(:slug => "about").first
   end
 
+
 end

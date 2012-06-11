@@ -1,6 +1,13 @@
-<section id='body_content'>
-  <%=raw @page.content_for(:body) %>
-</section>
-<section id='side_body_content'>
-  <%=raw @page.content_for(:side_body) %>
-</section>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>    
+    <section id='body_content'>
+      <%=raw @page.content_for(:body) %>
+    </section>
+    <section id='side_body_content'>
+      <%=raw @page.content_for(:side_body) %>
+    </section>
+  </div>
+</div>
