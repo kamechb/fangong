@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      links:
+        title: Links
       activities:
         title: Activities
       jobs:
@@ -21,6 +23,21 @@ es:
         title: Fgs
     fg:
       admin:
+        links:
+          actions:
+            create_new: Crear nuevo link
+            reorder: Reordenar links
+            reorder_done: Reordenación de links completada
+          records:
+            title: Links
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay links todavía. Pulsa en "Crear nuevo Link" para crear
+              tu primer link.
+          link:
+            view_live_html: Ver este link como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este link
+            delete: Borrar este link para siempre
         activities:
           actions:
             create_new: Crear nuevo activity
@@ -156,6 +173,9 @@ es:
               ventana nueva)</em>
             edit: Editar este fg
             delete: Borrar este fg para siempre
+      links:
+        show:
+          other: Otros links
       activities:
         show:
           other: Otros activities
@@ -185,6 +205,10 @@ es:
           other: Otros fgs
   activerecord:
     attributes:
+      refinery/fg/link:
+        name: Name
+        url: Url
+        logo: Logo
       refinery/fg/activity:
         title: Title
         main_image: Main Image

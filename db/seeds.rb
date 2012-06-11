@@ -10,4 +10,3 @@
 Refinery::Pages::Engine.load_seed
 
 Refinery::Fg::Engine.load_seed
-

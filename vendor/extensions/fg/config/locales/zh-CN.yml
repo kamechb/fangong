@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      links:
+        title: 友情链接
       activities:
         title: 活动
       jobs:
@@ -21,6 +23,19 @@ zh-CN:
         title: 凡宫
     fg:
       admin:
+        links:
+          actions:
+            create_new: 新建友情链接 
+            reorder: 排序友情链接 
+            reorder_done: 友情链接排序完成 
+          records:
+            title: 友情链接
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有友情链接. 单击 "新建友情链接" 添加第一个友情链接
+          link:
+            view_live_html: 查看友情链接 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该友情链接 
+            delete: 删除该友情链接 
         activities:
           actions:
             create_new: 新建活动 
@@ -142,6 +157,10 @@ zh-CN:
           other: 其他专业
   activerecord:
     attributes:
+      refinery/fg/link:
+        name: 名称
+        url: url地址
+        logo: Logo
       refinery/fg/activity:
         title: 活动主题
         main_image: 主要图片
