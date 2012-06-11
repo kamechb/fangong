@@ -122,6 +122,17 @@ module Refinery
         end
       end
 
+      initializer "register refinerycms_propagandas plugin" do
+        Refinery::Plugin.register do |plugin|
+          plugin.name = "propagandas"
+          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.fg_admin_propagandas_path }
+          plugin.pathname = root
+          plugin.activity = {
+            :class_name => :'refinery/fg/propaganda'
+          }
+          plugin.menu_match = %r{refinery/fg/propagandas(/.*)?$}
+        end
+      end
 
       config.after_initialize do
         Refinery.register_extension(Refinery::Fg)
@@ -134,6 +145,7 @@ module Refinery
         # Refinery.register_extension(Refinery::Jobs)
         # Refinery.register_extension(Refinery::Activities)
         # Refinery.register_extension(Refinery::Links)
+        # Refinery.register_extension(Refinery::Propagandas)
       end
     end
   end

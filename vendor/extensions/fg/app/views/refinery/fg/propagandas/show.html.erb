@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @propaganda.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @propaganda.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @propaganda.image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Desc</h1>
+    <p>
+      <%=raw @propaganda.desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @propaganda.content %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="propagandas">
+      <% @propagandas.each do |propaganda| %>
+        <li>
+          <%= link_to propaganda.title, refinery.fg_propaganda_path(propaganda) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

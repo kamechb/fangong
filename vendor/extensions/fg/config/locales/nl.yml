@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      propagandas:
+        title: Propagandas
       links:
         title: Links
       activities:
@@ -23,6 +25,21 @@ nl:
         title: Fgs
     fg:
       admin:
+        propagandas:
+          actions:
+            create_new: Maak een nieuwe Propaganda
+            reorder: Wijzig de volgorde van de Propagandas
+            reorder_done: Klaar met het wijzingen van de volgorde van de Propagandas
+          records:
+            title: Propagandas
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Propagandas. Druk op 'Maak een nieuwe Propaganda'
+              om de eerste aan te maken.
+          propaganda:
+            view_live_html: Bekijk deze propaganda op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze propaganda
+            delete: Verwijder deze propaganda voor eeuwig
         links:
           actions:
             create_new: Maak een nieuwe Link
@@ -173,6 +190,9 @@ nl:
               venster)</em>
             edit: Bewerk deze fg
             delete: Verwijder deze fg voor eeuwig
+      propagandas:
+        show:
+          other: Andere Propagandas
       links:
         show:
           other: Andere Links
@@ -205,6 +225,11 @@ nl:
           other: Andere Fgs
   activerecord:
     attributes:
+      refinery/fg/propaganda:
+        title: Title
+        image: Image
+        desc: Desc
+        content: Content
       refinery/fg/link:
         name: Name
         url: Url

@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      propagandas:
+        title: Propagandas
       links:
         title: Links
       activities:
@@ -23,6 +25,21 @@ fr:
         title: Fgs
     fg:
       admin:
+        propagandas:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Propaganda
+            reorder: Réordonner les Propagandas
+            reorder_done: Fin de réordonnancement des Propagandas
+          records:
+            title: Propagandas
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Propaganda. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Propaganda" pour créer votre premi(er/ère) propaganda.
+          propaganda:
+            view_live_html: Voir ce(t/tte) propaganda <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) propaganda
+            delete: Supprimer définitivement ce(t/tte) propaganda
         links:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Link
@@ -164,6 +181,9 @@ fr:
             view_live_html: Voir ce(t/tte) fg <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) fg
             delete: Supprimer définitivement ce(t/tte) fg
+      propagandas:
+        show:
+          other: Autres Propagandas
       links:
         show:
           other: Autres Links
@@ -196,6 +216,11 @@ fr:
           other: Autres Fgs
   activerecord:
     attributes:
+      refinery/fg/propaganda:
+        title: Title
+        image: Image
+        desc: Desc
+        content: Content
       refinery/fg/link:
         name: Name
         url: Url

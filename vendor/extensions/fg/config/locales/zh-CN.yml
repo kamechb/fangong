@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      propagandas:
+        title: 宣传广告
       links:
         title: 友情链接
       activities:
@@ -23,6 +25,19 @@ zh-CN:
         title: 凡宫
     fg:
       admin:
+        propagandas:
+          actions:
+            create_new: 新建宣传广告 
+            reorder: 排序宣传广告 
+            reorder_done: 宣传广告排序完成 
+          records:
+            title: 宣传广告
+            sorry_no_results: 对不起!没有结果 
+            no_items_yet: 还没有宣传广告. 单击 "新建宣传广告" 添加第一个宣传广告
+          propaganda:
+            view_live_html: 查看宣传广告 <br/><em>(在新窗口中打开)</em>
+            edit: 编辑该宣传广告 
+            delete: 删除该宣传广告 
         links:
           actions:
             create_new: 新建友情链接 
@@ -157,6 +172,11 @@ zh-CN:
           other: 其他专业
   activerecord:
     attributes:
+      refinery/fg/propaganda:
+        title: 标题
+        desc: 简单描述
+        image: 宣传图
+        content: 详细内容
       refinery/fg/link:
         name: 名称
         url: url地址

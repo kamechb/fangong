@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      propagandas:
+        title: Propagandas
       links:
         title: Links
       activities:
@@ -23,6 +25,20 @@ en:
         title: Fg
     fg:
       admin:
+        propagandas:
+          actions:
+            create_new: Add New Propaganda
+            reorder: Reorder Propagandas
+            reorder_done: Done Reordering Propagandas
+          records:
+            title: Propagandas
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Propagandas yet. Click "Add New Propaganda"
+              to add your first propaganda.
+          propaganda:
+            view_live_html: View this propaganda live <br/><em>(opens in a new window)</em>
+            edit: Edit this propaganda
+            delete: Remove this propaganda forever
         links:
           actions:
             create_new: Add New Link
@@ -163,6 +179,9 @@ en:
             view_live_html: View this fg live <br/><em>(opens in a new window)</em>
             edit: Edit this fg
             delete: Remove this fg forever
+      propagandas:
+        show:
+          other: Other Propagandas
       links:
         show:
           other: Other Links
@@ -195,6 +214,11 @@ en:
           other: Other Fgs
   activerecord:
     attributes:
+      refinery/fg/propaganda:
+        title: Title
+        image: Image
+        desc: Desc
+        content: Content
       refinery/fg/link:
         name: Name
         url: Url

@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="propagandas">
+    <% @propagandas.each do |propaganda| %>
+      <li>
+        <%= link_to propaganda.title, refinery.fg_propaganda_path(propaganda) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

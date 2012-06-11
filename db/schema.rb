@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120611055205) do
+ActiveRecord::Schema.define(:version => 20120611075727) do
 
   create_table "refinery_fg_activities", :force => true do |t|
     t.string   "title"
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20120611055205) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.boolean  "opened",     :default => true
+  end
+
+  create_table "refinery_fg_propagandas", :force => true do |t|
+    t.string   "title"
+    t.integer  "image_id"
+    t.string   "desc"
+    t.text     "content"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "refinery_fg_reports", :force => true do |t|
