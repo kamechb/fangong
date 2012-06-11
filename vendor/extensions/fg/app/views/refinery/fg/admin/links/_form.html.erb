@@ -15,6 +15,13 @@
     <%= f.text_field :url, :class => 'larger widest'  -%>
 
   </div>
+
+  <div class='field'>
+    <%= f.label :cooperation -%>
+    <%= f.radio_button :cooperation, 1, :checked => @link.cooperation  -%>合作企业
+    <%= f.radio_button :cooperation, 0, :checked => !@link.cooperation  -%>非合作企业
+
+  </div>
   
   <div class='field'>
     <%= f.label :logo -%>

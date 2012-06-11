@@ -1,0 +1,18 @@
+<div class=" propaganda">
+  <div class="wrapper_slider">
+  <!-- layout slider -->
+    <div class="lay_base slider_pattern"></div>
+    <div class="lay_base slider_shadow"></div>
+    <div class="bar_separate content_separate"></div>
+  <!-- end layout slider -->
+  <div class="slider_area">
+    <div class="slider_content">
+      <div id="slider" class="nivoSlider">  
+      <% @propagandas.each do |propaganda| %>
+        <%= link_to(image_fu(propaganda.image, "700x289"), "#") %>
+      <% end %>
+      </div>
+    </div><!-- end slider content -->
+  </div><!-- end slider area -->
+  </div><!-- end wrapper slider -->
+</div><!--well-->  

@@ -1,0 +1,15 @@
+    <div class="span4">
+      <div class="box sidebar">
+        <h3 class="box-header"><span class="box-title">学员活动</span><a class="readAll pull-right" href="#">更多</a></h3>
+        <div class="box-content">
+          <ul class="row thumbnails activities">
+          <% @activities.each do |activity| %>
+            <li>
+              <%= link_to(image_fu(activity.main_image, "214x229!"), "#")%>
+              <p><%= activity.desc %></p>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+      </div>  <!--well-->  
+    </div>

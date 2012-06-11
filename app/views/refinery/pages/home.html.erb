@@ -5,123 +5,16 @@
     </div>    
 
     <div class="span9">
-      <div class=" propaganda">
-        <div class="wrapper_slider">
-        <!-- layout slider -->
-          <div class="lay_base slider_pattern"></div>
-          <div class="lay_base slider_shadow"></div>
-          <div class="bar_separate content_separate"></div>
-        <!-- end layout slider -->
-        <div class="slider_area">
-          <div class="slider_content">
-            <div id="slider" class="nivoSlider">  
-              <a href="#"><%= image_tag 'gg1.jpg' %></a>
-              <a href="#"><%= image_tag 'gg2.jpg' %></a>
-              <a href="#"><%= image_tag 'gg3.jpg' %></a>
-              <a href="#"><%= image_tag 'gg4.jpg' %></a>
-              <a href="#"><%= image_tag 'gg5.jpg' %></a>
-            </div>
-          </div><!-- end slider content -->
-        </div><!-- end slider area -->
-        </div><!-- end wrapper slider -->
-      </div><!--well-->  
-            
-      <div class="box sidebar">
-        <h3 class="box-header"><span class="box-title">最新资讯</span><a class="readAll pull-right" href="#">更多</a></h3>
-        <div class="box-content">
-          <ul class="row events">
-          <% @reports.each do |report| %>
-            <li class="span4">
-              <a class="pull-left" href="#"><%= image_fu report.image, nil, {:width => 80, :height => 80} %></a>
-              <h4><%= link_to report.title, "#" %><small><%= report.created_at %></small></h4>
-              <p><%= report.desc %></p>
-            </li>
-          <% end %>
-          </ul>
-        </div>
-                  
+      <%= render :partial => "refinery/pages/propagandas" %>
+      <%= render :partial => "refinery/pages/latest_reports" %>
+
+      <%= render :partial => "refinery/pages/work_set" %>
+
+      <div class="row worksSet">
+        <%= render :partial => "refinery/pages/activities" %>
+        <%= render :partial => "refinery/pages/cooperations" %>
       </div>
-    
-      <div class="box sidebar">
-        <h3 class="box-header"><span class="box-title">作品展示</span><a class="readAll pull-right" href="#">更多</a></h3>
-        <div class="box-content">
-          <ul class="row thumbnails works">
-          <% @works.each do |work| %>
-            <li>
-              <%= link_to image_fu(work.main_image), "#" %>
-              <p><%= work.desc %></p>
-            </li>
-          <% end %>
-          </ul>
-        </div>
-      </div>  <!--well-->  
-      
-      <div class="box sidebar">
-        <h3 class="box-header"><span class="box-title">产品研发</span><a class="readAll pull-right" href="#">更多</a></h3>
-        <div class="box-content">
-          <ul class="row thumbnails works">
-          <% @research_works.each do |work| %>
-            <li>
-              <%= link_to image_fu(work.main_image), "#" %>
-              <p><%= work.desc %></p>
-            </li>
-          <% end %>
-          </ul>
-        </div>
 
-      </div>  <!--well-->    
-
-      <div class="box sidebar">
-        <h3 class="box-header"><span class="box-title">学员活动</span><a class="readAll pull-right" href="#">更多</a></h3>
-        <div class="box-content">
-          <ul class="row thumbnails activities">
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/1.jpg"></a>
-              <p>T台平面作品</p>
-            </li>
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/2.jpg"></a>
-              <p>T台平面作品</p>
-            </li>
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/3.jpg"></a>
-              <p>T台平面作品</p>
-            </li>
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/4.jpg"></a>
-              <p>T台平面作品</p>
-            </li>  
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/3.jpg"></a>
-              <p>T台平面作品</p>
-            </li>
-            <li>
-              <a href="works/show.html"><img width="214px" height="229px" alt="活动照片" src="img/activities/4.jpg"></a>
-              <p>T台平面作品</p>
-            </li>                              
-          </ul>
-        </div>
-      </div>  <!--well-->  
-      <div class="box sidebar">
-        <h3 class="box-header"><span class="box-title">凡宫简介</span><a class="readAll pull-right" href="#">更多</a></h3>
-        <div class="box-content">
-        <img width="370px" class="pull-left" src="img/activities/6.jpg"><p></p>
-        <p>凡宫造型培训机构，创立于2008年</p>
-        <p>原张菁化妆培训机构，基于文化理念的提升而更名</p>
-        <p>与北京电影制片厂天宇影视化妆培训学校共同打造浙江最具实力的影视化妆培训机构</p>
-        <p>我们拥有最前线的专业讲师团队</p>
-        
-        <p>我们是时尚领域中充满激情和专业精神的团队</p>
-        <p>我们提供关于化妆的各种知识：美术基础，服装设计，平面设计，色彩搭配，面具文化，影视美学，品牌鉴赏，国际礼仪，古典文化等。。</p>
-        <p>我们的宗旨是打造行业最精英的人士</p>
-        <p>与北京电影制片厂天宇影视化妆培训学校共同打造浙江最具实力的影视化妆培训机构</p>
-        <p>我们拥有最前线的专业讲师团队</p>
-        <p>我们是时尚领域中充满激情和专业精神的团队</p>
-    
-        </div>
-
-        
-      </div>                          
     </div>
   </div>
 </div>

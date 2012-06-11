@@ -5,4 +5,8 @@ module ApplicationHelper
 
     mapped
   end
+
+  def show_time(time)
+    time.strftime("%Y-%m-%d")
+  end
 end

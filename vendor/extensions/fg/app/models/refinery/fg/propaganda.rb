@@ -2,7 +2,7 @@ module Refinery
   module Fg
     class Propaganda < Refinery::Core::BaseModel
 
-      attr_accessible :title, :position
+      attr_accessible :title, :image_id, :desc, :content,  :position
 
       acts_as_indexed :fields => [:title, :desc, :content]
 

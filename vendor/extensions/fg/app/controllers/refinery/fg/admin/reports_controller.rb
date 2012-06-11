@@ -4,7 +4,7 @@ module Refinery
       class ReportsController < ::Refinery::AdminController
 
         crudify :'refinery/fg/report', 
-                :title_attribute => 'user_name', 
+                :title_attribute => 'title', 
                 :order => "created_at DESC",
                 :xhr_paging => true
 

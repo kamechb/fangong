@@ -1,0 +1,14 @@
+<div class="box">
+  <h3 class="box-header"><span class="box-title">最新资讯</span><a class="readAll pull-right" href="#">更多</a></h3>
+  <div class="box-content">
+    <ul class="row events">
+    <% @reports.each do |report| %>
+      <li class="span4">
+        <a class="pull-left" href="#"><%= image_fu report.image, "80x80", {:width => 80, :height => 80} %></a>
+        <h4><%= link_to report.title, "#" %><small> <%= show_time(report.created_at) %></small></h4>
+        <p><%= report.desc %></p>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>

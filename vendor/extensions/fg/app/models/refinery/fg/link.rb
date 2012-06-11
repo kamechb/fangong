@@ -2,7 +2,7 @@ module Refinery
   module Fg
     class Link < Refinery::Core::BaseModel
 
-      attr_accessible :name, :position
+      attr_accessible :name, :cooperation, :logo, :logo_id, :url, :position
 
       acts_as_indexed :fields => [:name, :url]
 
