@@ -1,11 +1,22 @@
-<% content_for :body_content_left do %>
-  <ul id="reports">
-    <% @reports.each do |report| %>
-      <li>
-        <%= link_to report.title, refinery.fg_report_path(report) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>    
+    <div class="span9">
+      <% @reports.each do |report| %>
+      <div class="well clearfix">
+        <div class="event">
+          <% if report.image%>
+          <%=link_to(image_fu(report.image, "110x110!"), refinery.fg_report_path(report), :class => "imageContainer pull-left")%>
+          <% end %>
+          <h2><%= link_to report.title, refinery.fg_report_path(report) %><small><%= show_time(report.created_at) %></small></h2>
+          <p><%= report.desc %></p>
+          <%= link_to "产看详细>>", refinery.fg_report_path(report), :class => "linkTo" %>
+        </div>
+      </div>
+      <%= will_paginate @reports%>
+      <% end %>
+    </div>
+  </div>
+</div>

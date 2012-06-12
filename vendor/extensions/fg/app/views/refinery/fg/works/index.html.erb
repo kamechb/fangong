@@ -1,11 +1,65 @@
-<% content_for :body_content_left do %>
-  <ul id="works">
-    <% @works.each do |work| %>
-      <li>
-        <%= link_to work.name, refinery.fg_work_path(work) %>
-      </li>
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills pull-right">
+    <% @work_categories.each do |c| %>
+      <li><%= link_to c.name, refinery.fg_works_path(:category => c.name) %></li>
     <% end %>
-  </ul>
-<% end %>
+    </ul>
+  </div>
+  <div class="BoardLayout" id="wrapper">
+    <div id="ColumnContainer" style="height: 885px;">
+      <div style="display: none;" class="feed">
+      </div>
+      <% @works.each do |work| %>
+      <div data-height="400" data-width="500" data-id="1" class="pin">
+        <div class="PinHolder">
+          <%= link_to(image_fu(work.main_image, "230x250"), "#", :class => "PinImage ImgLink")%>
+        </div>
+        <p class="description"><%= work.desc %></p>
+      </div>      
+      <% end %>
+    </div><!-- #ColumnContainer -->
 
-<%= render '/refinery/content_page' %>
+      <!-- Infinite scroll loading indicator -->
+    <div id="LoadingPins">
+      <img alt="Pin Loader Image" src="http://passets-cdn.pinterest.com/images/BouncingLoader.gif">
+      <span>Fetching pins…</span>
+    </div>
+  </div><!-- #wrapper -->      
+</div>
+
+
+<script type="text/javascript">
+  BoardLayout.contentArea = 940;
+  BoardLayout.setup();
+  $('.pin .PinImage').on('click', function(){
+    $('#zoomScroll .PinImage img').attr('src', $(this).find('img').attr('src')).css({
+      width: '600px',
+      height: 'auto'
+    });
+
+    $('#zoomScroll .PinBottom .description').html($(this).parents('.pin').find('p').html());
+
+    $('#zoomScroll').addClass('visible').show();
+    return false;
+  });
+  $('#zoomScroll .close').on('click', function(){
+    $('#zoomScroll').removeClass('visible').hide();
+    return false;
+  });
+  
+
+  $("#zoomScroll").click(function (c) {
+    if ($(c.target).is("#zoomScroll")) {
+      $('#zoomScroll').removeClass('visible').hide();
+    }
+  });
+  
+  $("#ColumnContainer").on("mousedown", ".PinImage", function () {
+                                
+    $(this).parents(".pin").addClass("spring")
+  });
+  $("#ColumnContainer").on("mouseout", ".spring", function () {
+    $(this).removeClass("spring")
+  });  
+</script> 

@@ -2,13 +2,13 @@ module Refinery
   module Fg
     class ReportsController < ::ApplicationController
 
-      before_filter :find_all_reports
       before_filter :find_page
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @report in the line below:
         present(@page)
+        @reports = Report.page(params[:page]).order("created_at DESC")
       end
 
       def show
@@ -20,10 +20,6 @@ module Refinery
       end
 
     protected
-
-      def find_all_reports
-        @reports = Report.order('position ASC')
-      end
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/fg/reports").first

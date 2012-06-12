@@ -2,13 +2,15 @@ module Refinery
   module Fg
     class WorksController < ::ApplicationController
 
-      before_filter :find_all_works
       before_filter :find_page
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @work in the line below:
         present(@page)
+        @works = Work.page(params[:page]).order("created_at DESC")
+        @works = @works.tagged_with(params[:category]) if params[:category].present?
+        @work_categories = Work.all_categories
       end
 
       def show
@@ -20,10 +22,6 @@ module Refinery
       end
 
     protected
-
-      def find_all_works
-        @works = Work.order('position ASC')
-      end
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/fg/works").first

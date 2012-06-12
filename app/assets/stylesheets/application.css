@@ -11,5 +11,6 @@
  *= require bootstrap
  *= require nivo-slider
  *= require public
+ *= require zoom
  *= require_self
 */

@@ -11,6 +11,13 @@ module Refinery
       belongs_to :main_image, :class_name => '::Refinery::Image'
 
       acts_as_taggable
+
+      class << self 
+        def all_categories
+          @all_tags ||= ActsAsTaggableOn::Tag.joins(:taggings).where("taggings.taggable_type='Refinery::Fg::Work'") 
+        end
+        alias_method :all_tags, :all_categories
+      end
     end
   end
 end

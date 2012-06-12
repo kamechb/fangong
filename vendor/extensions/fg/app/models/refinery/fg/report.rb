@@ -11,6 +11,10 @@ module Refinery
       belongs_to :image, :class_name => '::Refinery::Image'
 
       acts_as_taggable
+
+      def self.per_page
+        10
+      end
     end
   end
 end
