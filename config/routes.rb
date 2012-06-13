@@ -7,7 +7,23 @@ Fangong::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
 
   get '/about' => 'fg#about_us'
-  get '/certificate' => 'fg#certificate'
+  #get '/certificate' => 'fg#certificate'
+  %W(
+    about_us
+    certificate
+    contact_us
+    declare
+    enviroment
+    partner_school
+    preferential
+    privacy
+    registration_instruction
+    sitemap
+    statement
+  ).each do |page|
+    get "/#{page}" => "fg##{page}"
+  end
+
   mount Refinery::Core::Engine, :at => '/'
 
   # The priority is based upon order of creation:
