@@ -1,7 +1,7 @@
 #encoding: utf-8
 if Refinery::Page.where(:menu_match => "^/partner_school$").empty?
   partner_school_page = Refinery::Page.create!(
-    :title => "隐私声明",
+    :title => "合作伙伴",
     :deletable => true,
     :link_url => "/partner_school",
     :menu_match => "^/partner_school$"
@@ -9,12 +9,12 @@ if Refinery::Page.where(:menu_match => "^/partner_school$").empty?
 
   partner_school_body = <<-EOS
 <div class="well">
-	<img src="../img/schools/1.png" />
-	<p></p>
+  <img src="../img/schools/1.png" />
+  <p></p>
 </div>
 <div class="well">
-	<img src="../img/schools/2.png" />
-	<p></p>
+  <img src="../img/schools/2.png" />
+  <p></p>
 </div>
   EOS
 
