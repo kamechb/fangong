@@ -1,15 +1,15 @@
 <div class="box sidebar">
-  <h3 class="box-header"><span class="box-title">学员报名信息</span><a class="readAll pull-right" href="#">更多</a></h3>
+  <h3 class="box-header"><span class="box-title">学员报名信息</span></h3>
   <div class="box-content">
-  <ul class="students">
-  <% @signup_students.each do |student| %>
-    <li>
-      <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
-      <h4><%= link_to student.name, "#" %><small><%= student.address %></small><br></h4>
-      <small>hello world</small>
-      <p><%= student.profession.name %></p>
-    </li>
-  <% end %>
-  </ul>
+    <ul class="students">
+    <% @signup_students.each do |student| %>
+      <li>
+        <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
+        <h4><%= link_to student.name, "#" %><small><%= student.address %></small><br></h4>
+        <small>hello world</small>
+        <p><%= student.profession.name %></p>
+      </li>
+    <% end %>
+    </ul>
   </div>
 </div>  <!--well-->    
