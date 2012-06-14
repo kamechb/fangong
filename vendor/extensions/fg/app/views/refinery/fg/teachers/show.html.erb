@@ -1,57 +1,37 @@
-<% content_for :body_content_title do %>
-  <%= @teacher.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <div class="well clearfix">
+        <div class="teacher">
+          <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(@teacher) %>">
+            <%= image_fu @teacher.avatar, nil %>
+          </a>
+          <h2><%= link_to @teacher.name, refinery.fg_teacher_path(@teacher) %><small><%=raw @teacher.title %></small></h2>
+          <p><%= @teacher.desc %></p>
+          <p>作品：<%= @teacher.works %></p>
+          <div>
+            <%= raw @teacher.content %>
+          </div>
+        </div>
+        <div class="teachers">
+          <h2><%= t('.other') %></h2>
+          <ul id="teachers">
+            <% @teachers.each do |teacher| %>
+              <li>
+                <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(raw @teacher) %>">
+                  <%= image_fu teacher.avatar, nil %>
+                </a>
+              </li>
+            <% end %>
+          </ul>    
+        </div>
+     </div>  <!--well-->  
+    </div>
+  </div>
+</div>
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @teacher.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @teacher.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Works</h1>
-    <p>
-      <%=raw @teacher.works %>
-    </p>
-  </section>
-  <section>
-    <h1>Desc</h1>
-    <p>
-      <%=raw @teacher.desc %>
-    </p>
-  </section>
-  <section>
-    <h1>Content</h1>
-    <p>
-      <%=raw @teacher.content %>
-    </p>
-  </section>
-  <section>
-    <h1>Avatar</h1>
-    <p>
-      <%= image_fu @teacher.avatar, nil %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="teachers">
-      <% @teachers.each do |teacher| %>
-        <li>
-          <%= link_to teacher.name, refinery.fg_teacher_path(teacher) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
 
 <%= render '/refinery/content_page' %>

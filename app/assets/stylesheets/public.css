@@ -4,7 +4,7 @@ body{
   height: 100%;
   background: #999;
   word-wrap: break-word;
-  font-family: "Microsoft Yahei","Î¢ÈíÑÅºÚ",Tahoma,Arial,Helvetica,STHeiti;
+  font-family: "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
   _font-family: Tahoma,Arial,Helvetica,STHeiti;
   
 }
@@ -241,8 +241,18 @@ ul ul{
     color: #333;
 }
 
-
-/*-------------¹Ø×¢ followsocial-----------------*/
+.info{
+	font-size: 10px;
+	word-wrap: break-word;
+	1white-space: nowrap;
+}
+.box-center{
+	text-align: center;	
+}
+.PinImage{
+	cursor: default;	
+}
+/*-------------关注 followsocial-----------------*/
 .follow-list li{
 	display: block;
 	float: left;
@@ -433,7 +443,7 @@ ul ul{
 }
 .thumbnails img{
 	image-rendering: optimizequality;
-	display: block;/*img ÊÇÐÐ¿éÔªËØ£¬ÔÚIE»áÓÐÄ¬ÈÏµÄmargin, Íš¹ýÉèÖÃmarginÈ¥²»µô£¬Ö»ÄÜœ«ÆäÉèÎªblock;*/
+	display: block;/*img 是行块元素，在IE会有默认的margin, 通过设置margin去不掉，只能将其设为block;*/
 }
 
 .text-center{
@@ -464,7 +474,7 @@ ul ul{
 .worksSet .works img{
 	width: 142px;
 }
-/*------------------ÐÅÏ¢------------------*/
+/*------------------信息------------------*/
 
 .header2{
 	margin: 20px 0 10px;
@@ -582,7 +592,7 @@ legend p{
 	position: relative;
 }
 #ColumnContainer.empty{
-	background: url(/assets/building.gif) no-repeat center;
+	background: url(../images/building.gif) no-repeat center;
 }
 #ContextBar + #ColumnContainer{
 	margin-top: 15px;
@@ -783,22 +793,22 @@ legend p{
 	margin: 0.8em 0;
 }
 .pin.activity-1 div.info{
-	background-image: url(/assets/Activity-Pin.png);
+	background-image: url(../images/Activity-Pin.png);
 }
 .pin.activity-5 div.info{
-	background-image: url(/assets/Activity-Repin.png);
+	background-image: url(../images/Activity-Repin.png);
 }
 .pin.activity-6 div.info{
-	background-image: url(/assets/Activity-Like.png);
+	background-image: url(../images/Activity-Like.png);
 }
 .pin.activity-7 div.info{
-	background-image: url(/assets/Activity-Comment.png);
+	background-image: url(../images/Activity-Comment.png);
 }
 .pin.activity-26 div.info{
-	background-image: url(/assets/Activity-Board.png);
+	background-image: url(../images/Activity-Board.png);
 }
 .pin.activity-45 div.info{
-	background-image: url(/assets/Activity-People.png);
+	background-image: url(../images/Activity-People.png);
 }
 .pin.activity div.info p{
 	margin: 0;
@@ -881,7 +891,7 @@ legend p{
 	height: auto;
 }
 
-/*-------------------œ»»¥--------------*/ 
+/*-------------------交互--------------*/ 
  
 #ScrollToTop.Offscreen {
     -moz-transition-duration: 250ms;

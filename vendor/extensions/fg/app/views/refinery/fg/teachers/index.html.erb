@@ -1,11 +1,27 @@
-<% content_for :body_content_left do %>
-  <ul id="teachers">
-    <% @teachers.each do |teacher| %>
-      <li>
-        <%= link_to teacher.name, refinery.fg_teacher_path(teacher) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <ul id="teachers">
+        <% @teachers.each do |teacher| %>
+          <li class="well clearfix">
+            <div class="teacher">
+                <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(teacher) %>">
+                  <%= image_fu teacher.avatar, nil %>
+                </a>
+                <h2><%= link_to teacher.name, refinery.fg_teacher_path(teacher) %><small><%=teacher.title %></small></h2>
+                <p><%= teacher.desc %></p>
+                <p><%= teacher.works %></p>
+                <a href="<%= refinery.fg_teacher_path(teacher) %>" class="linkTo">查看详细>></a>
+              </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
+</div>
+
 
 <%= render '/refinery/content_page' %>
