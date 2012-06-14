@@ -1,45 +1,29 @@
-<% content_for :body_content_title do %>
-  <%= @report.title %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>    
+    <div class="span9">
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @report.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Desc</h1>
-    <p>
-      <%=raw @report.desc %>
-    </p>
-  </section>
-  <section>
-    <h1>Content</h1>
-    <p>
-      <%=raw @report.content %>
-    </p>
-  </section>
-  <section>
-    <h1>Image</h1>
-    <p>
-      <%= image_fu @report.image, nil %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="reports">
-      <% @reports.each do |report| %>
-        <li>
-          <%= link_to report.title, refinery.fg_report_path(report) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+      <div class="well clearfix">
+        <div class="report">
+          <h2><%= @report.title %><small><%= @report.created_at %></small></h2>
+          <p><%= @report.desc %></p>
+          <div>
+            <%= raw @report.content %>
+          </div>
+        </div>
+        <div class="relativeInfo">
+          <h2>最新资讯</h2>
+          <ul>
+            <% @reports.each do |report| %>
+              <li>
+                <%= link_to report.title, refinery.fg_report_path(report) %>
+              </li>
+            <% end %>
+          </ul>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@
           <% end %>
           <h2><%= link_to report.title, refinery.fg_report_path(report) %><small><%= show_time(report.created_at) %></small></h2>
           <p><%= report.desc %></p>
-          <%= link_to "产看详细>>", refinery.fg_report_path(report), :class => "linkTo" %>
+          <%= link_to "查看详细>>", refinery.fg_report_path(report), :class => "linkTo" %>
         </div>
       </div>
       <%= will_paginate @reports%>

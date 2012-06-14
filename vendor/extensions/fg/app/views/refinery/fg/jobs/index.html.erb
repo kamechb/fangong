@@ -1,11 +1,19 @@
-<% content_for :body_content_left do %>
-  <ul id="jobs">
-    <% @jobs.each do |job| %>
-      <li>
-        <%= link_to job.name, refinery.fg_job_path(job) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <ul id="jobs">
+        <% @jobs.each do |job| %>
+          <li class="well clearfix">
+            <div class="job">
+                <h2><%= job.company_name %>:<%= job.name %><small><%=job.created_at %></small></h2>
+                <p><%= job.desc %></p>
+              </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
+</div>

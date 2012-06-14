@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="span3">
+    <div class="span3" id="minor">
       <%= render_cell :sidebar, :all %>
     </div>    
-    <div class="span9">
+    <div class="span9" id="main">
       <%=raw @page.content_for(:body) %>
     </div>
   </div>

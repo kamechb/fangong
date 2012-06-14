@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div id="minor" class="span3">
+    <div id="minor" class="span3" id="minor">
     <%= render_cell :sidebar, :all %> 
     </div>
-    <div id="main" class="span9">
+    <div id="main" class="span9" id="main">
       <div class="well clearfix">
         <div class="teacher">
           <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(@teacher) %>">
@@ -11,18 +11,18 @@
           </a>
           <h2><%= link_to @teacher.name, refinery.fg_teacher_path(@teacher) %><small><%=raw @teacher.title %></small></h2>
           <p><%= @teacher.desc %></p>
-          <p>作品：<%= @teacher.works %></p>
+          <p><%= @teacher.works %></p>
           <div>
             <%= raw @teacher.content %>
           </div>
         </div>
-        <div class="teachers">
+        <div class="relativeInfo teachers">
           <h2><%= t('.other') %></h2>
-          <ul id="teachers">
+          <ul>
             <% @teachers.each do |teacher| %>
               <li>
-                <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(raw @teacher) %>">
-                  <%= image_fu teacher.avatar, nil %>
+                <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(teacher) %>">
+                  <%= image_fu teacher.avatar, "50x50!"%>
                 </a>
               </li>
             <% end %>

@@ -27,39 +27,3 @@
     </div>
   </div><!-- #wrapper -->      
 </div>
-
-
-<script type="text/javascript">
-  BoardLayout.contentArea = 940;
-  BoardLayout.setup();
-  $('.pin .PinImage').on('click', function(){
-    $('#zoomScroll .PinImage img').attr('src', $(this).find('img').attr('src')).css({
-      width: '600px',
-      height: 'auto'
-    });
-
-    $('#zoomScroll .PinBottom .description').html($(this).parents('.pin').find('p').html());
-
-    $('#zoomScroll').addClass('visible').show();
-    return false;
-  });
-  $('#zoomScroll .close').on('click', function(){
-    $('#zoomScroll').removeClass('visible').hide();
-    return false;
-  });
-  
-
-  $("#zoomScroll").click(function (c) {
-    if ($(c.target).is("#zoomScroll")) {
-      $('#zoomScroll').removeClass('visible').hide();
-    }
-  });
-  
-  $("#ColumnContainer").on("mousedown", ".PinImage", function () {
-                                
-    $(this).parents(".pin").addClass("spring")
-  });
-  $("#ColumnContainer").on("mouseout", ".spring", function () {
-    $(this).removeClass("spring")
-  });  
-</script> 

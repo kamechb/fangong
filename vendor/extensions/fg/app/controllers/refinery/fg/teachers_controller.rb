@@ -21,9 +21,6 @@ module Refinery
 
     protected
 
-      def find_all_teachers
-        @teachers = Teacher.order('position ASC')
-      end
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/fg/teachers").first

@@ -13,7 +13,7 @@ module Refinery
 
       def show
         @report = Report.find(params[:id])
-
+        @reports = Report.order('position ASC')
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @report in the line below:
         present(@page)

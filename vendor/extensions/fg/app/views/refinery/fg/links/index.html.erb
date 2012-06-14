@@ -1,11 +1,19 @@
-<% content_for :body_content_left do %>
-  <ul id="links">
-    <% @links.each do |link| %>
-      <li>
-        <%= link_to link.name, refinery.fg_link_path(link) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <ul id="friend_links">
+        <% @links.each do |link| %>
+          <li class="well clearfix">
+            <div class="link">
+              <%= link_to image_fu(link.logo, nil), link.url%>
+              <%= link_to link.name, link.url %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
+</div>

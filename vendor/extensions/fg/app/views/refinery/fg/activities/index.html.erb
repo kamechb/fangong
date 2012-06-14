@@ -1,11 +1,19 @@
-<% content_for :body_content_left do %>
-  <ul id="activities">
-    <% @activities.each do |activity| %>
-      <li>
-        <%= link_to activity.desc, refinery.fg_activity_path(activity) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="container">
 
-<%= render '/refinery/content_page' %>
+  <div class="BoardLayout" id="wrapper">
+    <div id="ColumnContainer" style="height: 885px;">
+      <div style="display: none;" class="feed">
+      </div>
+      <% @activities.each do |activity| %>
+      <div data-height="400" data-width="500" data-id="1" class="pin">
+        <div class="PinHolder">
+          <%= link_to(image_fu(activity.main_image, "230x250"), "#", :class => "PinImage ImgLink")%>
+        </div>
+        <p class="description"><%= activity.desc %></p>
+      </div>      
+      <% end %>
+    </div><!-- #ColumnContainer -->
+
+
+  </div><!-- #wrapper -->      
+</div>
