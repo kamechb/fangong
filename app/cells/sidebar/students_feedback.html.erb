@@ -1,14 +1,14 @@
 <div class="box sidebar">
-  <h3 class="box-header"><span class="box-title">学员反馈</span><a class="readAll pull-right" href="#">更多</a></h3>
+  <h3 class="box-header"><span class="box-title">学员反馈</span></h3>
   <div class="box-content">
-  <ul class="students">
-    <% @feedback_students.each do |student| %>
-    <li>
-      <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
-      <h4><%= link_to student.name, "#" %></h4>
-      <p>hello world hello world hello world</p>
-    </li>
-    <% end %>
-  </ul>
+    <ul class="students">
+      <% @feedback_students.each do |student| %>
+      <li>
+        <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
+        <h4><%= link_to student.name, "#" %></h4>
+        <p>hello world hello world hello world</p>
+      </li>
+      <% end %>
+    </ul>
   </div>
 </div>  <!--well-->  

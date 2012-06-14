@@ -1,5 +1,5 @@
 <div class="box">
-  <h3 class="box-header"><span class="box-title">最新资讯</span><a class="readAll pull-right" href="#">更多</a></h3>
+  <h3 class="box-header"><span class="box-title">最新资讯</span></h3>
   <div class="box-content">
     <ul class="row events">
     <% @reports.each do |report| %>
@@ -10,5 +10,8 @@
       </li>
     <% end %>
     </ul>
+    <div class="viewAll">
+				<a href="#">查看全部</a>
+		</div>		
   </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="box sidebar">
   <h3 class="box-header"><span class="box-title">最新开课时间</span></h3>
   <div class="box-content">
-  <ul class="nav nav-list">
-  <% @open_professions.each do |p| %>
-    <li class="course">
-      <a href="#"><%= p.name%><span class="time"><%= p.open_at%></span></a>
-    </li>
-  <% end %>
-  </ul>
+    <ul class="nav nav-list">
+    <% @open_professions.each do |p| %>
+      <li class="course">
+        <a href="#"><%= p.name%><span class="time"><%= p.open_at%></span></a>
+      </li>
+    <% end %>
+    </ul>
   </div>
 </div>    

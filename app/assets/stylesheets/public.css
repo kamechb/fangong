@@ -162,7 +162,7 @@ img{
 	background: #333;
 }
 #footer .spriteVertical{
-	background: #333 url(../img/sprite_vert.png) no-repeat 0 0;
+	background: #333 url(/assets/sprite_vert.png) no-repeat 0 0;
 }
 #footer .row{
 	1margin-bottom: 50px;
@@ -225,7 +225,7 @@ ul ul{
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 	padding: 5px 15px;
 	border-color: #e6ec8a;
-	background: #fff url(../img/chev.png) no-repeat 95% center;
+	background: #fff url(/assets/chev.png) no-repeat 95% center;
 }
 .nav-pills{
 	margin: 10px 0;
@@ -253,7 +253,7 @@ ul ul{
 	display: block;
 	height: 20px;
 	width: 20px;
-	background: url(../img/icons_follow.png) no-repeat;
+	background: url(/assets/icons_follow.png) no-repeat;
 }
 .follow-sinawb{
 	background-position: 0 0;
@@ -283,7 +283,7 @@ ul ul{
 	display: block;
 	height: 20px;
 	width: 20px;
-	background: url(../img/icons_social.png) no-repeat;
+	background: url(/assets/icons_social.png) no-repeat;
 }
 .share-sinawb{
 	background-position: 0 0;
@@ -416,7 +416,7 @@ ul ul{
 	1-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0,.3);
 	1-moz-box-shadow: 0 2px 2px rgba(0, 0, 0,.3);
 	1box-shadow: 0 2px 2px rgba(0, 0, 0,.3);
-	1background-image:url('../img/decoration/box_015_ct.png');
+	1background-image:url('/assets/decoration/box_015_ct.png');
 	border: 0;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -486,7 +486,7 @@ ul ul{
 }
 .title3{
 	padding-left: 26px;
-	background: url(../img/disc.png) no-repeat left center;
+	background: url(/assets/disc.png) no-repeat left center;
 	border-bottom: 1px solid  #e6ec8a;
 	margin: 10px 0;
 }
@@ -582,7 +582,7 @@ legend p{
 	position: relative;
 }
 #ColumnContainer.empty{
-	background: url(../images/building.gif) no-repeat center;
+	background: url(/assets/building.gif) no-repeat center;
 }
 #ContextBar + #ColumnContainer{
 	margin-top: 15px;
@@ -783,22 +783,22 @@ legend p{
 	margin: 0.8em 0;
 }
 .pin.activity-1 div.info{
-	background-image: url(../images/Activity-Pin.png);
+	background-image: url(/assets/Activity-Pin.png);
 }
 .pin.activity-5 div.info{
-	background-image: url(../images/Activity-Repin.png);
+	background-image: url(/assets/Activity-Repin.png);
 }
 .pin.activity-6 div.info{
-	background-image: url(../images/Activity-Like.png);
+	background-image: url(/assets/Activity-Like.png);
 }
 .pin.activity-7 div.info{
-	background-image: url(../images/Activity-Comment.png);
+	background-image: url(/assets/Activity-Comment.png);
 }
 .pin.activity-26 div.info{
-	background-image: url(../images/Activity-Board.png);
+	background-image: url(/assets/Activity-Board.png);
 }
 .pin.activity-45 div.info{
-	background-image: url(../images/Activity-People.png);
+	background-image: url(/assets/Activity-People.png);
 }
 .pin.activity div.info p{
 	margin: 0;
