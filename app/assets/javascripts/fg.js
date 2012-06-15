@@ -8,7 +8,8 @@ var ScrollToTop = ScrollToTop || {
         $(window).scroll(function () {
             (window.innerWidth ? window.pageYOffset : document.documentElement.scrollTop) >= a ? $("#ScrollToTop").removeClass("Offscreen") : $("#ScrollToTop").addClass("Offscreen")
         });
-        $("#ScrollToTop").click(function () {
+        console.log($("#ScrollToTop"));
+        $("#ScrollToTop").click(function(){
             $("html, body").animate({
                 scrollTop: "0px"
             }, 400);
@@ -47,7 +48,7 @@ var ScrollToTop = ScrollToTop || {
     
     
     
-    ScrollToTop.setup();
+    
   
 /*
   $('.toggleImage a, .imageSetHolder .count').click(function(){
@@ -84,7 +85,7 @@ var ScrollToTop = ScrollToTop || {
 
 
 jQuery(document).ready(function() {
-
+    ScrollToTop.setup();
     jQuery('#slider').nivoSlider({
       effect: 'random',
       slices: 15,
