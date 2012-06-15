@@ -2,16 +2,16 @@
   <h3 class="box-header"><span class="box-title">最新资讯</span></h3>
   <div class="box-content">
     <ul class="row events">
-    <% @reports.each do |report| %>
+    <% @reports.limit(4).each do |report| %>
       <li class="span4">
-        <a class="pull-left" href="#"><%= image_fu report.image, "80x80", {:width => 80, :height => 80} %></a>
-        <h4><%= link_to report.title, "#" %><small> <%= show_time(report.created_at) %></small></h4>
-        <p><%= report.desc %></p>
+        <a class="imageContainer pull-left" href="<%= refinery.fg_report_path(report) %>"><%= image_fu report.image, "80x80!", {:width => 80} %></a>
+        <h4><%= link_to report.title, refinery.fg_report_path(report) %><small> <%= show_time(report.created_at) %></small></h4>
+        <p><%= report.desc.truncate(50) %></p>
       </li>
     <% end %>
     </ul>
     <div class="viewAll">
-				<a href="#">查看全部</a>
+				<a href="<%= refinery.fg_reports_path %>">查看全部</a>
 		</div>		
   </div>
 </div>

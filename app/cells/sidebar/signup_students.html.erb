@@ -4,10 +4,8 @@
     <ul class="students">
     <% @signup_students.each do |student| %>
       <li>
-        <a class="pull-left avatar" href="#"><%= image_fu student.avatar, nil %></a>
-        <h4><%= link_to student.name, "#" %><small><%= student.address %></small><br></h4>
-        <small>hello world</small>
-        <p><%= student.profession.name %></p>
+        <h4><%= link_to student.name, "#", {:class => 'title'} %><small><%= student.address %></small></h4>
+        <p>所学课程：<%= student.profession.name %></p>
       </li>
     <% end %>
     </ul>

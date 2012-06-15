@@ -77,8 +77,7 @@ var ScrollToTop = ScrollToTop || {
   });
 
 
-  BoardLayout.contentArea = 940;
-  BoardLayout.setup();
+
 }(window.jQuery);
 
 

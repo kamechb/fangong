@@ -5,7 +5,7 @@
         <h3 class="box-header"><span class="box-title">作品展示</span></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
-          <% @works.each do |work| %>
+          <% @works.limit(4).each do |work| %>
             <li>
               <%= link_to image_fu(work.main_image), "#" %>
               <p><%= work.desc %></p>
@@ -24,7 +24,7 @@
         <h3 class="box-header"><span class="box-title">产品研发</span></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
-          <% @research_works.each do |work| %>
+          <% @research_works.limit(4).each do |work| %>
             <li>
               <%= link_to image_fu(work.main_image), "#" %>
               <p><%= work.desc %></p>

@@ -12,9 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require init_font 
-//= require bundle
-//= require Mosaic
-//= require jquery.nivo.slider
-//= require zoom
+//= require init_font
 //= require fg

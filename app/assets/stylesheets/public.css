@@ -325,6 +325,10 @@ ul ul{
 .box, .well{
   position: relative;  
 }
+.sidebar .viewAll{
+  position: static;
+  margin-top: 20px;
+}
 .viewAll{
   position: absolute;  
   text-align: right;
@@ -472,15 +476,19 @@ ul ul{
 .indent{
   text-indent: 28px;  
 }
+
 .worksSet .span4, .worksSet .span5{
   width: 345px;
 }
 .worksSet .span5{
   margin-left: 10px;
 }
-.worksSet .works img{
+.works li, .worksSet .works img{
   width: 142px;
 }
+.events p{
+  margin: 0;
+ }
 /*------------------信息------------------*/
 
 .header2{

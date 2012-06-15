@@ -4,7 +4,7 @@
     <ul class="nav nav-list">
     <% @open_professions.each do |p| %>
       <li class="course">
-        <a href="#"><%= p.name%><span class="time"><%= p.open_at%></span></a>
+        <a href="<%= refinery.fg_profession_path(p) %>"><%= p.name%><span class="time"><%= p.open_at%></span></a>
       </li>
     <% end %>
     </ul>

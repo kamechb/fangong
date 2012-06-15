@@ -7,14 +7,17 @@
 
       <div class="well clearfix">
         <div class="report">
-          <h2><%= @report.title %><small><%= @report.created_at %></small></h2>
+          <h2><%= @report.title %><small><%= show_time(@report.created_at) %></small></h2>
+          <div class="imageContainer" >
+            <%= image_fu @report.image, nil, {:width => 500} %>
+          </div>
           <p><%= @report.desc %></p>
           <div>
             <%= raw @report.content %>
           </div>
         </div>
         <div class="relativeInfo">
-          <h2>最新资讯</h2>
+          <h3>最新资讯</h3>
           <ul>
             <% @reports.each do |report| %>
               <li>
