@@ -6,12 +6,11 @@
       <% @cooperations.each do |cooperation| %>
         <li>
           <%= link_to(image_fu(cooperation.logo, "214x229"), "#") %>
-          <p><%= cooperation.name %></p>
         </li>
       <% end %>
       </ul>
       <div class="viewAll">
-        <a href="show.html">查看全部</a>
+        <a href="<%= refinery.fg_cooperations_path %>">查看全部</a>
       </div>              
     </div>
   </div>  <!--well-->    

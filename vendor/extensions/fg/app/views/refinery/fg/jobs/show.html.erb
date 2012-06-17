@@ -1,45 +1,27 @@
-<% content_for :body_content_title do %>
-  <%= @job.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <div class="well clearfix">
+        <div class="job">
+          <h2><%= @job.company_name %>:<%= @job.name %><small><%=@job.created_at %></small></h2>
+          <p><%= @job.desc %></p>
+          <div><%= raw @job.content %></div>
+        </div>
+        <div class="relativeInfo">
+          <h3>最新招聘</h3>
+          <ul>
+            <% @jobs.each do |job| %>
+              <li>
+                <%= link_to "#{job.company_name}:#{job.name}", refinery.fg_job_path(job) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @job.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Company Name</h1>
-    <p>
-      <%=raw @job.company_name %>
-    </p>
-  </section>
-  <section>
-    <h1>Desc</h1>
-    <p>
-      <%=raw @job.desc %>
-    </p>
-  </section>
-  <section>
-    <h1>Content</h1>
-    <p>
-      <%=raw @job.content %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="jobs">
-      <% @jobs.each do |job| %>
-        <li>
-          <%= link_to job.name, refinery.fg_job_path(job) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>

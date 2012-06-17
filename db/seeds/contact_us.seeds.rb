@@ -18,13 +18,13 @@ if Refinery::Page.where(:menu_match => "^/contact_us$").empty?
         <li>联系电话：0571-88039985 0571-87175975</li>
         <li>
           <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=875913932&site=qq&menu=yes">
-            <img border="0" src="http://wpa.qq.com/pa?p=2:875913932:42" alt="点击这里给我发消息" title="点击这里给我发消息">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:875913932:1" alt="点击这里给我发消息" title="点击这里给我发消息">
           </a>
           <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=250838451&site=qq&menu=yes">
-            <img border="0" src="http://wpa.qq.com/pa?p=2:250838451:42" alt="点击这里给我发消息" title="点击这里给我发消息">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:250838451:1" alt="点击这里给我发消息" title="点击这里给我发消息">
           </a>
           <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1318024583&site=qq&menu=yes">
-            <img border="0" src="http://wpa.qq.com/pa?p=2:1318024583:42" alt="点击这里给我发消息" title="点击这里给我发消息">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:1318024583:1" alt="点击这里给我发消息" title="点击这里给我发消息">
           </a>
         </li>
       </ul>

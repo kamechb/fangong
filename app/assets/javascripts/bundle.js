@@ -22,7 +22,7 @@ var BoardLayout = function () {
                                 RepinDialog.grid()
                             }
                         }
-                        Zoom.setup()
+                        //Zoom.setup()
                     });
                     this.center = !! a;
                     this.setupComplete = true

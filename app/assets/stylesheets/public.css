@@ -119,6 +119,12 @@ img{
 .navbar {
   margin-bottom: 0;
   1border-bottom: 5px solid #e6ec8a;
+  1position: relative;
+}
+.navbar .subnav{
+  1position: relative;
+  1bottom: -60px;
+  1right: 0;
 }
 .list li{
   margin-bottom: 10px;
@@ -970,4 +976,44 @@ legend p{
 }
 .linkTo:hover{
   color: #333;  
+}
+.pagination{
+  text-align: center;
+}
+.pagination a, .pagination span{
+  padding: 5px 14px;
+}
+.pagination a{
+  float:none;
+  border: 1px solid #969a5a;
+  background: #e6ec8a;
+  
+}
+.pagination a:hover{
+  border: 1px solid #969a5a;
+  background: #e6ec8a;
+}
+.pagination .current{
+  font-style: normal;
+}
+.pagination .disabled{
+  display: none;
+}
+
+form .error{
+  margin-left: 160px;
+  color: #B94A48;
+  font-size: 12px;
+}
+.fieldWithErrors input{
+  border-color: #B94A48;
+}
+
+.qqFixed{
+  left: 0;
+  top: 200px;
+  position: fixed;
+}
+.qqFixed a{
+  display: block;
 }

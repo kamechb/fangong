@@ -5,7 +5,7 @@
     <% @signup_students.each do |student| %>
       <li>
         <h4><%= link_to student.name, "#", {:class => 'title'} %><small><%= student.address %></small></h4>
-        <p>所学课程：<%= student.profession.name %></p>
+        <p>所学课程：<%= link_to student.profession.name, refinery.fg_profession_path(student.profession)%></p>
       </li>
     <% end %>
     </ul>

@@ -3,7 +3,7 @@
   <div class="box-content">
     <ul class="nav nav-list">
     <% @jobs.each do |job| %>
-      <li><%= link_to "#{job.company_name}: #{job.name}", "#" %></li>
+      <li><%= link_to "#{job.company_name}: #{job.name}", refinery.fg_job_path(job) %></li>
     <% end %>
     </ul>
     <div class="viewAll">

@@ -22,7 +22,9 @@ class FgController < ApplicationController
   end
 
   def about_us
-    @page = ::Refinery::Page.where(:slug => "关于凡宫").first
+    @page = ::Refinery::Page.where(:slug => "关于我们").first
+    puts '-----------------'
+    p @page
   end
 
   def certificate

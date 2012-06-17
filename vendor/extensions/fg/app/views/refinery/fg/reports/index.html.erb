@@ -15,8 +15,9 @@
           <%= link_to "查看详细>>", refinery.fg_report_path(report), :class => "linkTo" %>
         </div>
       </div>
-      <%= will_paginate @reports%>
       <% end %>
+      <%= will_paginate @reports, {:previous_label => '上一页', :next_label => '下一页'} %>
+      
     </div>
   </div>
 </div>

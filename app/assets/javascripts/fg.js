@@ -8,7 +8,6 @@ var ScrollToTop = ScrollToTop || {
         $(window).scroll(function () {
             (window.innerWidth ? window.pageYOffset : document.documentElement.scrollTop) >= a ? $("#ScrollToTop").removeClass("Offscreen") : $("#ScrollToTop").addClass("Offscreen")
         });
-        console.log($("#ScrollToTop"));
         $("#ScrollToTop").click(function(){
             $("html, body").animate({
                 scrollTop: "0px"
@@ -86,53 +85,7 @@ var ScrollToTop = ScrollToTop || {
 
 jQuery(document).ready(function() {
     ScrollToTop.setup();
-    jQuery('#slider').nivoSlider({
-      effect: 'random',
-      slices: 15,
-      boxCols: 8,
-      boxRows: 4,
-      animSpeed: 500,
-      pauseTime: 3000,
-      startSlide: 0,
-      directionNav: true,
-      directionNavHide: false,
-      controlNav: true,
-      controlNavThumbs: false,
-      controlNavThumbsFromRel: false,
-      controlNavThumbsSearch: '.jpg',
-      controlNavThumbsReplace: '_thumb.jpg',
-      keyboardNav: false,
-      pauseOnHover: true,
-      manualAdvance: false,
-      captionOpacity: 0.8,
-      prevText: 'pre',
-      nextText: 'next',
-      randomStart: false,
-      beforeChange: function(){},
-      afterChange: function(){},
-      slideshowEnd: function(){},
-      lastSlide: function(){},
-      afterLoad: function(){}
-    });
-    if(typeof(sessvars) != 'undefined'){
-  if(sessvars['.nivo-prevNav']?sessvars['.nivo-prevNav']:'null' != 'null' || sessvars['.nivo-nextNav']?sessvars['.nivo-nextNav']:'null' != 'null' || sessvars['.nivo-directionNav a']?sessvars['.nivo-directionNav a']:'null' != 'null'){
-      if(sessvars['.nivo-prevNav'] == 'none' || sessvars['.nivo-directionNav a'] == 'none'){
-        //alert('other');
-        //jQuery('.nivo-directionNav a').css({'background-image': sessvars['arrow_pos_abs_bkg'], 'width':sessvars['arrow_pos_abs_width'], 'height':sessvars['arrow_pos_abs_height']});
-        //jQuery('.nivo-directionNav a').css('top', sessvars['arrow_pos_abs_top']);
-        //jQuery('.nivo-nextNav').css({'right': sessvars['arrow_pos_abs_sides']});
-        //jQuery('.nivo-prevNav').css('left', sessvars['arrow_pos_abs_sides']);
-        jQuery('.print, .nivo-directionNav a').css('background-color', 'red');
-      }else{
-        //alert('none');
-        jQuery('.nivo-nextNav').attr('style', sessvars['.nivo-nextNav']);
-        jQuery('.nivo-prevNav').attr('style', sessvars['.nivo-prevNav']);
-        jQuery('.nivo-directionNav a').attr('style', sessvars['.nivo-directionNav a']);
-      }
-
-    }
-  }
-  });
+});
 
 
 function bookmark_us(url, title){

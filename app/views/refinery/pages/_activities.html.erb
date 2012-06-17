@@ -5,12 +5,12 @@
       <ul class="thumbnails works">
       <% @activities.limit(4).each do |activity| %>
         <li>
-            <%= link_to(image_fu(activity.main_image, "214x229!"), "#", :class => 'imageContainer')%>
+            <%= link_to(image_fu(activity.main_image, "214x229!"), refinery.fg_activity_path(activity), :class => 'imageContainer')%>
         </li>
       <% end %>
       </ul>
       <div class="viewAll">
-				 <a href="#">查看全部</a>
+				 <a href="<%= refinery.fg_activities_path %>">查看全部</a>
 			</div>		
     </div>
   </div>  <!--well-->  

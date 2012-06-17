@@ -152,6 +152,21 @@ Refinery::Core::Engine.routes.append do
     end
   end
 
+  # Frontend routes
+  namespace :fg do
+    resources :cooperations, :only => [:index, :show]
+  end
+
+  # Admin routes
+  namespace :fg, :path => '' do
+    namespace :admin, :path => 'refinery/fg' do
+      resources :cooperations, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
 
   # Frontend routes
   namespace :fg do

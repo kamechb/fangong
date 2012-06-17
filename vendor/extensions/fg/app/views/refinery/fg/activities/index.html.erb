@@ -17,3 +17,8 @@
 
   </div><!-- #wrapper -->      
 </div>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'j' %>
+  <%= javascript_include_tag 'bundle' %>
+<% end %>

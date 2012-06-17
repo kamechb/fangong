@@ -10,10 +10,11 @@
             <div class="job">
                 <h2><%= job.company_name %>:<%= job.name %><small><%=job.created_at %></small></h2>
                 <p><%= job.desc %></p>
+                <%= link_to "查看详细>>", refinery.fg_job_path(job), :class => "linkTo" %>
               </div>
           </li>
         <% end %>
       </ul>
     </div>
-    </div>
+  </div>
 </div>

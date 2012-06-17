@@ -1,45 +1,34 @@
-<% content_for :body_content_title do %>
-  <%= @work.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render_cell :sidebar, :all %>
+    </div>    
+    <div class="span9">
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @work.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Desc</h1>
-    <p>
-      <%=raw @work.desc %>
-    </p>
-  </section>
-  <section>
-    <h1>Content</h1>
-    <p>
-      <%=raw @work.content %>
-    </p>
-  </section>
-  <section>
-    <h1>Main Image</h1>
-    <p>
-      <%= image_fu @work.main_image, nil %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="works">
-      <% @works.each do |work| %>
-        <li>
-          <%= link_to work.name, refinery.fg_work_path(work) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+      <div class="well clearfix">
+        <div class="work">
+          <h2><%= @work.name %><small><%= show_time(@work.created_at) %></small></h2>
+          <div class="imageContainer" >
+            <%= image_fu @work.main_image, nil, {:width => 500} %>
+          </div>
+          <p><%= @work.desc %></p>
+          <div>
+            <%= raw @work.content %>
+          </div>
+        </div>
+        <div class="relativeInfo">
+          <h3>其他作品</h3>
+          <ul>
+            <% @works.each do |work| %>
+              <li>
+                <a class="imageContainer pull-left" href="<%= refinery.fg_work_path(work) %>">
+                  <%= image_fu work.main_image, "50x50!"%>
+                </a>              
+              </li>
+            <% end %>
+          </ul>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
