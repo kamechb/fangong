@@ -7,7 +7,7 @@
       <% @activities.each do |activity| %>
       <div data-height="400" data-width="500" data-id="1" class="pin">
         <div class="PinHolder">
-          <%= link_to(image_fu(activity.main_image, "230x250"), "#", :class => "PinImage ImgLink")%>
+          <%= link_to(image_fu(activity.main_image, "230x250"), refinery.fg_activity_path(activity), :class => "PinImage ImgLink")%>
         </div>
         <p class="description"><%= activity.desc %></p>
       </div>      

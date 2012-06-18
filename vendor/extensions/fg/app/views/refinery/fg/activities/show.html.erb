@@ -16,18 +16,6 @@
             <%= raw @activity.content %>
           </div>
         </div>
-        <div class="relativeInfo">
-          <h3>其他活动</h3>
-          <ul>
-            <% @activities.each do |activity| %>
-              <li>
-                <a class="imageContainer pull-left" href="<%= refinery.fg_activity_path(activity) %>">
-                  <%= image_fu activity.main_image, "50x50!"%>
-                </a>              
-              </li>
-            <% end %>
-          </ul>    
-        </div>
       </div>
     </div>
   </div>

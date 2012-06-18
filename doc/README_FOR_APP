@@ -1,2 +1,13 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+== Setup
+  * rake db:create
+  * rake db:migrate
+  * rake db:seed(设置Gemfile加载seedbank，之后注释掉，好像对象的desc方法有冲突)
+
+== 数据修改
+  * 进入refinery管理后台修改home首页名称, 删除自动生成的about页面 
+
+== TODO
+  学员反馈
+  图片大小确定
+  footer链接
+

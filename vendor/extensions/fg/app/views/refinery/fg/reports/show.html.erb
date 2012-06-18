@@ -8,10 +8,7 @@
       <div class="well clearfix">
         <div class="report">
           <h2><%= @report.title %><small><%= show_time(@report.created_at) %></small></h2>
-          <div class="imageContainer" >
-            <%= image_fu @report.image, nil, {:width => 500} %>
-          </div>
-          <p><%= @report.desc %></p>
+          <pre><%= @report.desc %></pre>
           <div>
             <%= raw @report.content %>
           </div>
@@ -19,11 +16,11 @@
         <div class="relativeInfo">
           <h3>最新资讯</h3>
           <ul>
-            <% @reports.each do |report| %>
-              <li>
-                <%= link_to report.title, refinery.fg_report_path(report) %>
-              </li>
-            <% end %>
+          <% @reports.each do |report| %>
+            <li>
+              <%= link_to report.title, refinery.fg_report_path(report) %>
+            </li>
+          <% end %>
           </ul>    
         </div>
       </div>

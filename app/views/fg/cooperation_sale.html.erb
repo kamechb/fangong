@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="span3" id="minor">
-      <%= render_cell :sidebar, :all %>
-    </div> 
+      <%= render_cell :sidebar, :online %>
+      <%= render_cell :sidebar, :cooperation %>
+    </div>    
     <div class="span9" id="main">
-      <%= render :partial => "fg/about_us_nav" %>
       <%=raw @page.content_for(:body) %>
     </div>
   </div>

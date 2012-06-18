@@ -16,18 +16,6 @@
             <%= raw @work.content %>
           </div>
         </div>
-        <div class="relativeInfo">
-          <h3>其他作品</h3>
-          <ul>
-            <% @works.each do |work| %>
-              <li>
-                <a class="imageContainer pull-left" href="<%= refinery.fg_work_path(work) %>">
-                  <%= image_fu work.main_image, "50x50!"%>
-                </a>              
-              </li>
-            <% end %>
-          </ul>    
-        </div>
       </div>
     </div>
   </div>

@@ -14,6 +14,10 @@ module Refinery
         @work_categories = Work.all_categories
       end
 
+      def research
+        @works = Work.where(:research => true)
+      end
+
       def show
         @work = Work.find(params[:id])
         @works = Work.all
