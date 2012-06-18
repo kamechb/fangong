@@ -13,13 +13,13 @@ module Refinery
       #   present(@page)
       # end
 
-      # def show
-      #   @student = Student.find(params[:id])
+      def show
+        @student = Student.find(params[:id])
 
-      #   # you can use meta fields from your model instead (e.g. browser_title)
-      #   # by swapping @page for @student in the line below:
-      #   present(@page)
-      # end
+        # you can use meta fields from your model instead (e.g. browser_title)
+        # by swapping @page for @student in the line below:
+        present(@page)
+      end
 
       def create
         @student = Student.new(params[:student])
