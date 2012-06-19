@@ -4,8 +4,8 @@
       <div class="well-large">
         <h3>合作</h3>
         <ul>
-          <li><a href="enterprise_cooperations/index.html">企业合作</a></li>
-          <li><a href="job.html">诚聘精英</a></li>
+          <li><%= link_to "企业合作", main_app.cooperation_sale_path %></li>
+          <li><a href="/pages/诚聘精英">诚聘精英</a></li>
         </ul>
 
       </div>
@@ -14,9 +14,9 @@
       <div class="well-large spriteVertical">
         <h3>声明</h3>
         <ul>
-          <li><a href="trademark_statement.html">商标声明</a></li>
-          <li><a href="fangong.html">凡宫声明</a></li>
-          <li><a href="pviacy.html">隐私声明</a></li>
+          <li><a href="<%= main_app.statement_path%>">商标声明</a></li>
+          <li><a href="<%= main_app.declare_path %>">凡宫声明</a></li>
+          <li><a href="<%= main_app.privacy_path %>">隐私声明</a></li>
         </ul>
       </div>
     </div>
@@ -35,8 +35,8 @@
               <img border="0" src="http://wpa.qq.com/pa?p=2:1318024583:4" alt="点击这里给我发消息" title="点击这里给我发消息">
             </a>
           </li>
-          <li><a href="map.html">网站地图</a></li>
-          <li><a href="contact_us/index.html">联系我们</a></li>
+          <li><a href="<%= main_app.sitemap_path%>">网站地图</a></li>
+          <li><a href="<%= main_app.contact_us_path %>">联系我们</a></li>
         </ul>
       </div>
     </div>

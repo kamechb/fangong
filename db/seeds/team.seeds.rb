@@ -122,11 +122,12 @@ if Refinery::Page.where(:menu_match => "^/team$").empty?
   </div>
 </div>  <!--well-->   
   EOS
+  
 
   team.parts.create(
-    :title => default_page_part, 
+    :title => 'body', 
     :body => team_body,
-    :position => index
+    :position => 0
   )
 end
 

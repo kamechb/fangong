@@ -24,6 +24,7 @@ Fangong::Application.routes.draw do
     cooperation_organization
     enterprise_training
     sitemap
+    team
   ).each do |page|
     get "/#{page}" => "fg##{page}"
   end

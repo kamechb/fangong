@@ -217,11 +217,15 @@ zh-CN:
         grade: 年级
         study_class: 班级
         profession_id: 专业
+        profession: 专业
         interest: 兴趣爱好
         tel: 联系方式
         job: 就职工作
         avatar: 头像
         feedback: 反馈
+        remittance: 汇款方式
+        staying: 住宿
+        gender: 性别
       refinery/fg/profession:
         name: 名称
         content: 详细内容

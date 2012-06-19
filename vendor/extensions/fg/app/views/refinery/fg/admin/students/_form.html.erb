@@ -9,6 +9,13 @@
   </div>
 
   <div class='field'>
+    <%= f.label :gender -%>
+    <%= f.radio_button :gender, 1, :checked => @student.gender -%>男
+    <%= f.radio_button :gender, 0, :checked => !@student.gender -%>女
+
+  </div>
+
+  <div class='field'>
     <%= f.label :address -%>
     <%= f.text_field :address -%>
 
@@ -41,6 +48,12 @@
   <div class='field'>
     <%= f.label :staying -%>
     <%= f.text_field :staying -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :remittance -%>
+    <%= f.text_field :remittance -%>
 
   </div>
   

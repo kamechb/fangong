@@ -3,11 +3,10 @@
     <div class="span3">
       <%= render_cell :sidebar, :all %>
     </div>    
-    <section id='body_content'>
-      <%=raw @page.content_for(:body) %>
-    </section>
-    <section id='side_body_content'>
-      <%=raw @page.content_for(:side_body) %>
-    </section>
+    <div class="span9">
+      <div class="well">
+        <%=raw @page.content_for(:body) %>
+      </div>
+    </div>
   </div>
 </div>

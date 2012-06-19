@@ -10,6 +10,7 @@ class FgController < ApplicationController
     privacy:                      '隐私声明',
     registration_instruction:     '报名须知',
     statement:                    '商标声明',
+    team:                         '团队'
     # about_us:                     '关于凡宫'
     # cooperation_sale:             '合作与销售',
     # cooperation_organization:     '合作机构',

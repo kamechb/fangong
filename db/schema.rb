@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120611134424) do
+ActiveRecord::Schema.define(:version => 20120619151457) do
 
   create_table "refinery_fg_activities", :force => true do |t|
     t.string   "title"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20120611134424) do
   end
 
   create_table "refinery_fg_students", :force => true do |t|
-    t.string   "name",          :null => false
+    t.string   "name",                             :null => false
     t.string   "address"
     t.string   "email"
     t.string   "qq"
@@ -100,9 +100,11 @@ ActiveRecord::Schema.define(:version => 20120611134424) do
     t.integer  "avatar_id"
     t.text     "feedback"
     t.integer  "position"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "staying"
+    t.boolean  "gender",        :default => false
+    t.text     "remittance"
   end
 
   create_table "refinery_fg_teachers", :force => true do |t|

@@ -5,10 +5,8 @@
 	
 }
 #zoomScroll .preNav, #zoomScroll .nextNav{
-	1bottom: 131px;
     position: absolute;
     top: 30%;
-    1width: 40px;
 }
 #zoomScroll .nextNav{
 	right: 0;
