@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="well">
+    <div class="page-header">
+      <h1>网站地图</h1>
+    </div>
+    <ul>
+      <li>
+        <%= link_to "首页", "/" %>
+      </li>
+
+      <li>
+        <%= link_to "专业", refinery.fg_professions_path %>
+        <% Refinery::Fg::Profession.all.each do |p| %>
+          <li>
+            <%= link_to p.name, refinery.fg_profession_path(p) %>
+          </li>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to "资质证书", main_app.certificate_path %>
+      </li>
+
+      <li>
+        <%= link_to "资讯", refinery.fg_reports_path %>
+      </li>
+      
+      <li>
+        <%= link_to "师资", refinery.fg_teachers_path %>
+      </li>
+
+      <li>
+        <%= link_to "作品展示", refinery.fg_works_path %>
+      </li>
+      <li>
+        <%= link_to "求职招聘", refinery.fg_jobs_path %>
+      </li>
+      <li>
+        <%= link_to "企业合作", main_app.cooperation_organization_path %>
+      </li>
+      <li>
+        <%= link_to "企业培训", main_app.enterprise_training_path %>
+      </li>
+      <li>
+        <%= link_to "关于凡宫", main_app.about_us_path %>
+      </li>
+      <li>
+        <%= link_to "环境", main_app.enviroment_path %>
+      </li>
+      <li>
+        <%= link_to "联系我们", main_app.contact_us_path %>
+      </li>
+      <li>
+        <%= link_to "隐私声明", main_app.privacy_path %>
+      </li>
+      <li>
+        <%= link_to "凡宫声明", main_app.declare_path %>
+      </li>
+      <li>
+        <%= link_to "商标声明", main_app.statement_path %>
+      </li>
+    </ul>
+  </div>
+</div>
