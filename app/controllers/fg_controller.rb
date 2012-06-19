@@ -60,5 +60,8 @@ class FgController < ApplicationController
     render :about_us
   end
 
+  def sitemap
+  end
+
 
 end

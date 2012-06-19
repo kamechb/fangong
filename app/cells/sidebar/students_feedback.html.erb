@@ -5,6 +5,7 @@
       <% @feedback_students.each do |student| %>
       <li>
         <h4><%= link_to student.name, refinery.fg_student_path(student) %></h4>
+        <p><%= truncate(student.feedback, :length => 30) %></p>
       </li>
       <% end %>
     </ul>
