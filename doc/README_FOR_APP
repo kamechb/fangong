@@ -10,4 +10,17 @@
   学员反馈
   图片大小确定
   footer链接
+  
+== Stylesheet
+  * bootstrap.css
+  * public.css
+  * nivo-slider.css
+  
+== Javascript
+  * bootstrap.js
+  * bundle.js
+  * fg.js
+  * init_font.js
+  * j.js
+  * jquery.nivo.slider.js
 
