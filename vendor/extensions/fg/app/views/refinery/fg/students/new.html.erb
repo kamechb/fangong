@@ -19,7 +19,7 @@
               </div>
             </legend>
             <div class="control-group">
-              <%= f.label :profession_id, "选择课程", :class => "control-label" %>
+              <%= f.label :profession_id, "选择专业", :class => "control-label" %>
               <div class="controls">
                 <%= f.select :profession_id, @professions.map { |p|[p.name, p.id] }, :id => 'via' %>
               </div>                  
@@ -28,6 +28,13 @@
               <%= f.label :name, "姓名", :class => "control-label" %>
               <div class="controls">
                 <%= f.text_field :name, :class => "input-xlarge" %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :gender, "性别", :class => "control-label" %>
+              <div class="controls">
+                <%= f.radio_button :gender, 1 -%>男
+                <%= f.radio_button :gender, 0, :checked => true -%>女
               </div>
             </div>
             <div class="control-group">
@@ -63,7 +70,17 @@
             <div class="control-group">
               <%= f.label :staying, "住宿预定", :class => "control-label" %>
               <div class="controls">
-                <%= f.text_field :staying, :class => "input-xlarge" %>
+                <%= f.radio_button :staying, "自己解决住宿", :checked => true %>自己解决住宿
+                <br/>
+                <%= f.radio_button :staying, "预订机构宿舍（预付一个月住宿费350元）" %>预订机构宿舍（预付一个月住宿费350元）
+              </div>
+            </div>                            
+            <div class="control-group">
+              <%= f.label :remittance, "住宿预定", :class => "control-label" %>
+              <div class="controls">
+                <%= f.radio_button :remittance, "银行汇款（**银行**分行 卡号：**********8 名字***）", :checked => true %>银行汇款（**银行**分行 卡号：**********8 名字***）
+                <br/>
+                <%= f.radio_button :remittance, "现场报名" %>现场报名
               </div>
             </div>                            
             <div class="control-group">

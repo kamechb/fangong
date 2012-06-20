@@ -9,6 +9,13 @@
   </div>
 
   <div class='field'>
+    <%= f.label :gender -%>
+    <%= f.radio_button :gender, 1, :checked => @student.gender -%>男
+    <%= f.radio_button :gender, 0, :checked => !@student.gender -%>女
+
+  </div>
+
+  <div class='field'>
     <%= f.label :address -%>
     <%= f.text_field :address -%>
 
@@ -41,6 +48,12 @@
   <div class='field'>
     <%= f.label :staying -%>
     <%= f.text_field :staying -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :remittance -%>
+    <%= f.text_field :remittance -%>
 
   </div>
   
@@ -78,18 +91,24 @@
     <%= f.text_field :interest  -%>
 
   </div>
+
+  <div class='field'>
+    <%= f.label :feedback -%>
+    <%= f.text_area :feedback, :class => 'larger widest' -%>
+
+  </div>
   
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
-        <% [:job, :feedback].each_with_index do |part, part_index| %>
+        <% [:job].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
             <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/fg/student", :default => part.to_s.titleize), "##{part}" %>
           </li>
         <% end %>
       </ul>
       <div id='page_part_editors'>
-        <% [:job, :feedback].each do |part| %>
+        <% [:job].each do |part| %>
           <div class='page_part' id='<%= part %>'>
             <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
           </div>

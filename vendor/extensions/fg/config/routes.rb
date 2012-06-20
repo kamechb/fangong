@@ -36,7 +36,11 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :fg do
-    resources :works, :only => [:index, :show]
+    resources :works, :only => [:index, :show] do
+      collection do
+        get :research
+      end
+    end
   end
 
   # Admin routes

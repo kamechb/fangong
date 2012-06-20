@@ -1,12 +1,4 @@
 <div class="container">
-  <div class="row">
-    <ul class="nav nav-pills pull-right">
-      <li><%= link_to "全部作品", refinery.fg_works_path %></li>
-    <% @work_categories.each do |c| %>
-      <li><%= link_to c.name, refinery.fg_works_path(:category => c.name) %></li>
-    <% end %>
-    </ul>
-  </div>
   <div class="BoardLayout" id="wrapper">
     <div id="ColumnContainer" style="height: 885px;">
       <div style="display: none;" class="feed">
@@ -27,7 +19,6 @@
     </div>
     
   </div><!-- #wrapper -->
-  <%= will_paginate @works, {:previous_label => '上一页', :next_label => '下一页'} %>
 </div>
 
 <% content_for :javascripts do %>

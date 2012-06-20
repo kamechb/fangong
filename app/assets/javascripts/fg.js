@@ -1,4 +1,4 @@
-﻿// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
@@ -49,11 +49,11 @@ var ScrollToTop = ScrollToTop || {
     
     
   
-/*
-  $('.toggleImage a, .imageSetHolder .count').click(function(){
-    $(this).parents('.imageSetHolder').toggleClass('enlarge');
-    return false;                    
-  });*/
+	/*
+	  $('.toggleImage a, .imageSetHolder .count').click(function(){
+	    $(this).parents('.imageSetHolder').toggleClass('enlarge');
+	    return false;                    
+	  });*/
   
   
   
@@ -75,9 +75,6 @@ var ScrollToTop = ScrollToTop || {
     }
     return false;
   });
-
-
-
 }(window.jQuery);
 
 

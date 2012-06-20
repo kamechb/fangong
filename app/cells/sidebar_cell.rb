@@ -28,7 +28,7 @@ class SidebarCell < Cell::Rails
   end
 
   def open_professions
-    @open_professions = Refinery::Fg::Profession.where(:opened => true)         # where(:opened => true) @professions
+    @open_professions = Refinery::Fg::Profession.where(:opened => true).limit(5)         # where(:opened => true) @professions
     render
   end
   
@@ -48,7 +48,11 @@ class SidebarCell < Cell::Rails
   end
 
   def jobs
-    @jobs = Refinery::Fg::Job.limit(5)
+    @jobs = Refinery::Fg::Job.order("created_at DESC").limit(5)
+    render
+  end
+  
+  def cooperation
     render
   end
 

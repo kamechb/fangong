@@ -14,7 +14,7 @@ module Refinery
 
       class << self 
         def all_categories
-          @all_tags ||= ActsAsTaggableOn::Tag.joins(:taggings).where("taggings.taggable_type='Refinery::Fg::Work'") 
+          ActsAsTaggableOn::Tag.joins(:taggings).where("taggings.taggable_type='Refinery::Fg::Work'") 
         end
         alias_method :all_tags, :all_categories
       end

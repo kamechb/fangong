@@ -8,7 +8,7 @@
         <% @jobs.each do |job| %>
           <li class="well clearfix">
             <div class="job">
-                <h2><%= job.company_name %>:<%= job.name %><small><%=job.created_at %></small></h2>
+                <h2><%= job.company_name %>:<%= job.name %><small><%= show_time(job.created_at) %></small></h2>
                 <p><%= job.desc %></p>
                 <%= link_to "查看详细>>", refinery.fg_job_path(job), :class => "linkTo" %>
               </div>

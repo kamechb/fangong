@@ -5,12 +5,12 @@
       <ul class="thumbnails works">
       <% @cooperations.each do |cooperation| %>
         <li>
-          <%= link_to(image_fu(cooperation.logo, "214x229"), "#") %>
+        <%= link_to(image_fu(cooperation.logo, nil), cooperation.url, :target =>"_blank" ) %>
         </li>
       <% end %>
       </ul>
       <div class="viewAll">
-        <a href="<%= refinery.fg_cooperations_path %>">查看全部</a>
+        <a href="<%= main_app.cooperation_organization_path %>">查看全部</a>
       </div>              
     </div>
   </div>  <!--well-->    

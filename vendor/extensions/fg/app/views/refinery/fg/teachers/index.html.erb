@@ -4,12 +4,13 @@
     <%= render_cell :sidebar, :all %> 
     </div>
     <div id="main" class="span9">
+      <%= render :partial => "fg/about_us_nav" %>
       <ul id="teachers">
         <% @teachers.each do |teacher| %>
           <li class="well clearfix">
             <div class="teacher">
                 <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(teacher) %>">
-                  <%= image_fu teacher.avatar, nil %>
+                  <%= image_fu teacher.avatar, "150x150!" %>
                 </a>
                 <h2><%= link_to teacher.name, refinery.fg_teacher_path(teacher) %><small><%=teacher.title %></small></h2>
                 <p><%= teacher.desc %></p>

@@ -20,6 +20,11 @@ Fangong::Application.routes.draw do
     registration_instruction
     sitemap
     statement
+    cooperation_sale
+    cooperation_organization
+    enterprise_training
+    sitemap
+    team
   ).each do |page|
     get "/#{page}" => "fg##{page}"
   end

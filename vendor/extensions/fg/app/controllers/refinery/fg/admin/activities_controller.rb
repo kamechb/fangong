@@ -4,7 +4,7 @@ module Refinery
       class ActivitiesController < ::Refinery::AdminController
 
         crudify :'refinery/fg/activity',
-                :title_attribute => 'desc', 
+                :title_attribute => 'title', 
                 :order => "created_at DESC",
                 :xhr_paging => true
 
