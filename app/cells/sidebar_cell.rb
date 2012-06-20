@@ -43,7 +43,7 @@ class SidebarCell < Cell::Rails
   end
 
   def students_feedback
-    @feedback_students = Refinery::Fg::Student.where("feedback NOT NULL").limit(5)
+    @feedback_students = Refinery::Fg::Student.where("feedback IS NOT NULL").limit(5)
     render
   end
 
