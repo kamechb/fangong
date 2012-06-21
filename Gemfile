@@ -55,3 +55,5 @@ gem 'acts-as-taggable-on'
 gem 'cells'
 # gem 'seedbank'
 # gem 'rails-timeago'
+
+gem 'unicorn'
