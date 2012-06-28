@@ -50,8 +50,11 @@ a:active, a:link, a:visited{
   border: 0;
   outline: 0;
 }
-
+.actions{
+  margin: 0 0 10px;
+}
 .actions a{
+  padding: 9px 22px 10px;
   background: #bbe756;
   background: #b3e234;
   -moz-user-select: none;
@@ -201,7 +204,7 @@ img{
 }
 
 .info{
-  font-size: 10px;
+  font-size: 9px;
   word-wrap: break-word;
 }
 .box-center{
@@ -397,12 +400,7 @@ img{
   text-align: center;
 }
 
-.actions{
-  margin: 0 0 10px;
-}
-.actions a{
-  padding: 9px 22px 10px;
-}
+
 .imageContainer.pull-left{
   margin-right: 10px;
   text-decoration:none;
