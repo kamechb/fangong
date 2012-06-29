@@ -1,6 +1,6 @@
 work_dir = "/home/fangong/apps/fangong"
 
-worker_processes 2
+worker_processes 4
 working_directory work_dir 
 
 # This loads the application in the master process before forking
