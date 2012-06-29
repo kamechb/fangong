@@ -9,7 +9,7 @@
         <div class="work">
           <h2><%= @work.name %><small><%= show_time(@work.created_at) %></small></h2>
           <div class="imageContainer" >
-            <%= image_fu @work.main_image, nil, {:width => 500} %>
+            <%= image_fu @work.main_image, "380x380" %>
           </div>
           <p><%= @work.desc %></p>
           <div>
