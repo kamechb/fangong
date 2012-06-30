@@ -214,6 +214,7 @@ zh-CN:
         main_image: 代表图片 
       refinery/fg/student:
         name: 姓名
+        graduation: 毕业状态
         grade: 年级
         study_class: 班级
         profession_id: 专业

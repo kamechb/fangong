@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120619151457) do
+ActiveRecord::Schema.define(:version => 20120630080722) do
 
   create_table "refinery_fg_activities", :force => true do |t|
     t.string   "title"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20120619151457) do
     t.string   "staying"
     t.boolean  "gender",        :default => false
     t.text     "remittance"
+    t.boolean  "graduation",    :default => false
   end
 
   create_table "refinery_fg_teachers", :force => true do |t|

@@ -26,7 +26,7 @@
           <ul class="row thumbnails works">
           <% @research_works.limit(4).each do |work| %>
             <li>
-              <%= link_to image_fu(work.main_image), refinery.fg_work_path(work) %>
+              <%= link_to image_fu(work.main_image, '142x142'), refinery.fg_work_path(work) %>
               <p><%= work.desc %></p>
             </li>
           <% end %>
