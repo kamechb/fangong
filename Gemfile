@@ -57,3 +57,4 @@ gem 'cells'
 # gem 'rails-timeago'
 
 gem 'unicorn'
+gem 'foreman'

@@ -5,7 +5,7 @@ module Refinery
 
       attr_accessible :name, :address, :email, :qq, :msn, :know_from, :leave_message, :tel, :profession_id, 
                       :staying, :grade, :study_class, :interest, :job, :avatar, :avatar_id, :feedback, :position,
-                      :remittance, :gender
+                      :remittance, :gender, :graduation
 
       acts_as_indexed :fields => [:name]
 

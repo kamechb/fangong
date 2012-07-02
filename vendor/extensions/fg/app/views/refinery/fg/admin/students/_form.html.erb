@@ -9,6 +9,13 @@
   </div>
 
   <div class='field'>
+    <%= f.label :graduation -%>
+    <%= f.radio_button :graduation, 1, :checked => @student.graduation -%>毕业
+    <%= f.radio_button :graduation, 0, :checked => !@student.graduation -%>未毕业
+
+  </div>
+
+  <div class='field'>
     <%= f.label :gender -%>
     <%= f.radio_button :gender, 1, :checked => @student.gender -%>男
     <%= f.radio_button :gender, 0, :checked => !@student.gender -%>女
