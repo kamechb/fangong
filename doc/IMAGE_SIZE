@@ -1,0 +1,43 @@
+== 首页头部
+  * width: 
+  * height:
+
+== 广告
+  * width:  620px
+  * height: 206px
+
+== 资讯缩略图
+  * width: 80px
+  * height: 80px
+ 
+== 首页作品缩略图
+  * width:  142px
+  * height: 152px
+
+== 作品展示缩略图
+  * width:  180px
+  * height: 等比例高度， 写到内置样式里（style="height: dddpx;"）
+
+== 活动缩略图
+  * width:  142px
+  * height: 152px
+
+== 合作机构－todo
+  * width:  142px
+  * height: 152px
+
+== 地图：凡宫位置
+  * width:  313px
+  * height: 352px
+
+== 教师缩略图
+  * width:  150px
+  * height: 150px
+
+== 环境缩略图
+  * width:  313px
+  * height: 235px
+
+== 学员反馈信
+  * width: 338px
+  * height: 450px
