@@ -1,0 +1,45 @@
+== 头部图片
+  * width: 620px
+  * height: 260px
+
+== 广告
+  * width: 620px
+  * height: 206px
+
+== 资讯缩略图
+  * width: 80px
+  * height: 80px
+
+== 首页作品缩略图
+  * width: 142px
+  * height: 152px
+
+== 作品展示缩略图
+  * width: 180px
+  * height: 根据宽度等比例缩放，要求后端根据宽度计算出高度送给前端，格式：<img style="height: xxpx" ... />
+
+== 学员活动缩略图
+  * width: 142px
+  * height: 152px
+
+== 合作机构
+  * width: 142px
+  * height: 152px
+
+== 凡宫地图
+  * width: 313px
+  * height: auto
+
+== 教师缩略图
+  * width: 150px
+  * height: 150px
+
+== 环境缩略图
+  * width: 313px
+  * height: auto
+
+== 学员反馈信
+  * width: 338px
+  * height: auto
+
+** 主栏中的图片最大宽度：600px (广告除外)
