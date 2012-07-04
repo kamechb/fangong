@@ -110,7 +110,9 @@ img{
 .list li{
   margin-bottom: 10px;
 }
-
+.qqList a:hover{
+  text-decoration: none;
+}
 #header{
  color: #333;
 }
@@ -417,8 +419,14 @@ img{
 .worksSet .span5{
   margin-left: 10px;
 }
-.works li, .worksSet .works img{
+.works li{
   width: 142px;
+  height: 152px;
+  overflow: hidden;
+} 
+.worksSet .works img{
+  width: 142px;
+  min-height: 152px;
 }
 .events p{
   margin: 0;
@@ -635,6 +643,8 @@ legend p{
 }
 .pin .ImgLink{
   position: relative;
+  display: block;
+  *zoom: 1;
 }
 .pin .ImgLink:hover{
   text-decoration: none;

@@ -9,3 +9,18 @@
 <% end %>
 
 <%= render '/refinery/content_page' %>
+
+<% content_for :js do %>
+  <%= javascript_include_tag 'jquery-ui.min.js'%>
+  <script>
+    jQuery().ready(function(){
+      $('#courseList').accordion({
+        autoHeight: false,
+        navigation: true,
+        alwaysOpen: false,
+        active: false,
+        header: '.title3'
+      });
+    });
+  </script>
+<% end %>
