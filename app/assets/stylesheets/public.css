@@ -642,9 +642,7 @@ legend p{
   z-index: 2;
 }
 .pin .ImgLink{
-  position: relative;
   display: block;
-  *zoom: 1;
 }
 .pin .ImgLink:hover{
   text-decoration: none;

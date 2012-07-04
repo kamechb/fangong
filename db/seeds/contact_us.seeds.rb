@@ -29,7 +29,7 @@ if Refinery::Page.where(:menu_match => "^/contact_us$").empty?
         </li>
       </ul>
       <div class="imageContainer ">
-        <img src="../img/contact/map.png" /> 
+        <img src="../img/contact/map.png" width="313px"/> 
       </div>
       
     </div>
