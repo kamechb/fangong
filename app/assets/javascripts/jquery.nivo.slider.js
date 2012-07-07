@@ -699,7 +699,7 @@ jQuery(document).ready(function() {
     slices: 15,
     boxCols: 8,
     boxRows: 4,
-    animSpeed: 500,
+    animSpeed: 1000,
     pauseTime: 3000,
     startSlide: 0,
     directionNav: true,
