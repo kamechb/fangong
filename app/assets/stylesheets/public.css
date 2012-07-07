@@ -32,6 +32,9 @@ h2 small{
   font-size: 14px;
   margin-left: 5px;
 }
+p{
+  overflow: hidden;  
+}
 ul, ol{
    list-style: none outside none;
   margin-left: 0;
@@ -114,7 +117,8 @@ img{
   text-decoration: none;
 }
 #header{
- color: #333;
+  color: #333;
+  margin-top: 10px;
 }
 
 #footer{
@@ -172,7 +176,9 @@ img{
   color: #CDA869;
   text-decoration: none;
 }
-
+#sitemap ul{
+  margin-left: 28px;
+}
 .nav-list  > li > a{
   position: relative;
 }
@@ -336,6 +342,9 @@ img{
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+.box-title:hover{
+  text-decoration: none;
 }
 .box-header .box-title{
   background-color: #e6ec8a;
@@ -651,6 +660,7 @@ legend p{
   max-width: 180px;
   opacity: 1;
   webkit-transition: opacity 0.3s;
+  display: block;
 }
 .pin .ImgLink img.lazy{
   opacity: 0;
@@ -952,4 +962,25 @@ form .error{
 }
 .qqFixed a{
   display: block;
+  background: #ecf3fb;
+  border: 1px solid #b5b9ba;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  1line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding-right: 5px;
+}
+.qqFixed a:hover{
+  text-decoration: none;
+}
+.qqFixed a img{
+  vertical-align: middle;
+}
+.qqFixed .qqTitle{
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
