@@ -29,7 +29,7 @@
           <ul class="thumbnails">
             <% @other_works.each do |work| %>
               <li>
-                <a class="imageContainer pull-left" href="<%= refinery.fg_work_path(work) %>">
+                <a class="imageContainer" href="<%= refinery.fg_work_path(work) %>">
                   <%= image_fu work.main_image, "150x150#c"%>
                 </a>
               </li>
