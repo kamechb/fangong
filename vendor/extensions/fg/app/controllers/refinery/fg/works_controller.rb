@@ -20,6 +20,9 @@ module Refinery
 
       def show
         @work = Work.find(params[:id])
+        @next_work = Work.where("id > ?", params[:id]).limit(1).first
+        @pre_work = Work.where("id < ?", params[:id]).limit(1).first
+        @other_works = [@pre_work, @next_work].compact
 
         #@works = Work.all
         #@works = Work.tagged_with(@work.tag_list)
