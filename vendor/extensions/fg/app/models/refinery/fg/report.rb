@@ -15,6 +15,14 @@ module Refinery
       def self.per_page
         10
       end
+
+      class << self 
+        def all_categories
+          ActsAsTaggableOn::Tag.joins(:taggings).where("taggings.taggable_type='Refinery::Fg::Report'").uniq
+        end
+        alias_method :all_tags, :all_categories
+      end
+
     end
   end
 end

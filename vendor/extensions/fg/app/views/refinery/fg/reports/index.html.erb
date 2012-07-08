@@ -4,6 +4,14 @@
       <%= render_cell :sidebar, :all %>
     </div>    
     <div class="span9">
+      <div class="row">
+        <ul class="nav nav-pills pull-right">
+        <% @report_categories.each do |c| %>
+          <li><%= link_to c.name, refinery.fg_reports_path(:category => c.name) %></li>
+        <% end %>
+        </ul>
+      </div>
+
       <% @reports.each do |report| %>
       <div class="well clearfix">
         <div class="event">

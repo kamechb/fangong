@@ -5,6 +5,14 @@
     </div>    
     <div class="span9">
 
+      <div class="row">
+        <ul class="nav nav-pills pull-right">
+        <% @report_categories.each do |c| %>
+          <li><%= link_to c.name, refinery.fg_reports_path(:category => c.name) %></li>
+        <% end %>
+        </ul>
+      </div>
+
       <div class="well clearfix">
         <div class="report">
           <h2><%= @report.title %><small><%= show_time(@report.created_at) %></small></h2>

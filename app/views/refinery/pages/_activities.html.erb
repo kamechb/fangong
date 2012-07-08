@@ -5,7 +5,7 @@
       <ul class="thumbnails works">
       <% @activities.limit(4).each do |activity| %>
         <li>
-            <%= link_to(image_fu(activity.main_image, "142x152"), refinery.fg_activity_path(activity), :class => 'imageContainer')%>
+            <%= link_to(image_fu(activity.main_image, "142x152#c"), refinery.fg_activity_path(activity), :class => 'imageContainer')%>
         </li>
       <% end %>
       </ul>

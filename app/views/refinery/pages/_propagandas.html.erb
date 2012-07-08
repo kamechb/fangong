@@ -9,7 +9,7 @@
     <div class="slider_content">
       <div id="slider" class="nivoSlider">  
       <% @propagandas.each do |propaganda| %>
-        <%=link_to image_fu(propaganda.image, "620x206"), refinery.fg_propaganda_path(propaganda) %>
+        <%=link_to image_fu(propaganda.image, nil), refinery.fg_propaganda_path(propaganda) %>
       <% end %>
       </div>
     </div><!-- end slider content -->

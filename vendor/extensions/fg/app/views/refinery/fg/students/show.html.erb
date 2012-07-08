@@ -16,6 +16,16 @@
             <%= raw @student.job %>
           </div>
         </div>
+        <div class="relativeInfo students">
+          <h2><%= t('.other') %></h2>
+          <ul>
+            <% @other_students.each do |student| %>
+              <li>
+                <%= link_to student.name, refinery.fg_student_path(student) %>
+              </li>
+            <% end %>
+          </ul>    
+        </div>
       </div>
     </div>
   </div>
