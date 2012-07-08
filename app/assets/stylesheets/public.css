@@ -24,7 +24,9 @@ h2,
 h3 {
   font-size: 14px;
 }
-h4,
+h4{
+  font-size: 14px;
+}
 h5,
 h6 {
   font-size: 12px;
@@ -471,7 +473,7 @@ img{
 
 .events p{
   color: #666;
-  font-size: 12px;
+  font-size: 13px;
 }
 .works img{
   width: 150px;
@@ -496,7 +498,7 @@ img{
   font-size: 12px;
 }
 .students p{
-  font-size: 12px;
+  font-size: 13px;
   color: #444;
 }
 .activities img{
