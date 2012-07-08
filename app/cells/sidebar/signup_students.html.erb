@@ -1,5 +1,5 @@
 <div class="box sidebar">
-  <h3 class="box-header"><span class="box-title">学员报名信息</span></h3>
+  <h3 class="box-header"><%= link_to "学员报名信息", refinery.signup_fg_students_path, :class => "box-title" %></h3>
   <div class="box-content">
     <ul class="students">
     <% @signup_students.each do |student| %>
@@ -9,5 +9,8 @@
       </li>
     <% end %>
     </ul>
+    <div class="viewAll">
+       <a href="<%= refinery.signup_fg_students_path %>">查看全部</a>
+    </div>
   </div>
 </div>  <!--well-->    

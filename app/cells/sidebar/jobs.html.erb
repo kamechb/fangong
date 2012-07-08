@@ -1,5 +1,5 @@
 <div class="box sidebar">
-  <h3 class="box-header"><span class="box-title">求职招聘</span></h3>
+  <h3 class="box-header"><%= link_to "求职招聘", refinery.fg_jobs_path, :class => "box-title" %></h3>
   <div class="box-content">
     <ul class="nav nav-list">
     <% @jobs.each do |job| %>

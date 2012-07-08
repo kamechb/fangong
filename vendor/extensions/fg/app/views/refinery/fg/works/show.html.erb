@@ -3,6 +3,13 @@
     <div class="span3">
       <%= render_cell :sidebar, :all %>
     </div>    
+
+    <ul class="nav nav-pills pull-right">
+    <% @work_categories.each do |c| %>
+      <li><%= link_to c.name, refinery.fg_works_path(:category => c.name) %></li>
+    <% end %>
+    </ul>
+
     <div class="span9">
 
       <div class="well clearfix">

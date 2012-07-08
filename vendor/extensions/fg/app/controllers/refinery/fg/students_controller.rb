@@ -34,6 +34,14 @@ module Refinery
       def new
         @student = Student.new
       end
+      
+      def signup
+        @students = Refinery::Fg::Student.page(params[:page]).where(:graduation => false).order("created_at DESC")
+      end
+
+      def feedback
+        @students = Refinery::Fg::Student.page(params[:page]).where("feedback IS NOT NULL").where(:graduation => true)
+      end
 
     protected
 

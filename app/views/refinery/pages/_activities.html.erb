@@ -1,17 +1,17 @@
 <div class="span4">
   <div class="box">
-    <h3 class="box-header"><span class="box-title">学员天地</span></h3>
+    <h3 class="box-header"><%= link_to "学员天地", refinery.fg_activities_path, :class => "box-title" %></h3>
     <div class="box-content">
       <ul class="thumbnails works">
       <% @activities.limit(4).each do |activity| %>
         <li>
-            <%= link_to(image_fu(activity.main_image, "214x229!"), refinery.fg_activity_path(activity), :class => 'imageContainer')%>
+            <%= link_to(image_fu(activity.main_image, "142x152"), refinery.fg_activity_path(activity), :class => 'imageContainer')%>
         </li>
       <% end %>
       </ul>
       <div class="viewAll">
-				 <a href="<%= refinery.fg_activities_path %>">查看全部</a>
-			</div>		
+        <a href="<%= refinery.fg_activities_path %>">查看全部</a>
+      </div>		
     </div>
   </div>  <!--well-->  
 </div>

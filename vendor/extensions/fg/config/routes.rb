@@ -19,7 +19,12 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :fg do
-    resources :students, :only => [:index, :show, :new, :create]
+    resources :students, :only => [:index, :show, :new, :create] do
+      collection do
+        get :feedback
+        get :signup
+      end
+    end
   end
 
   # Admin routes

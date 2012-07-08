@@ -1,5 +1,5 @@
 <div class="box">
-  <h3 class="box-header"><span class="box-title">最新资讯</span></h3>
+  <h3 class="box-header"><%= link_to "最新资讯", refinery.fg_reports_path, :class => "box-title" %></h3>
   <div class="box-content">
     <ul class="row events">
     <% @reports.limit(4).each do |report| %>
@@ -11,7 +11,7 @@
     <% end %>
     </ul>
     <div class="viewAll">
-				<a href="<%= refinery.fg_reports_path %>">查看全部</a>
-		</div>		
+      <a href="<%= refinery.fg_reports_path %>">查看全部</a>
+    </div>    
   </div>
 </div>

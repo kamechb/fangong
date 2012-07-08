@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div id="minor" class="span3">
+    <%= render_cell :sidebar, :all %> 
+    </div>
+    <div id="main" class="span9">
+      <ul id="students">
+        <% @students.each do |student| %>
+          <li class="well clearfix">
+            <div class="student">
+              <% if student.avatar %>
+                <a class="imageContainer pull-left" href="<%= refinery.fg_student_path(student) %>">
+                  <%= image_fu student.avatar, "150x150!" %>
+                </a>
+              <% end %>
+              <h2><%= link_to student.name, refinery.fg_student_path(student) %></h2>
+              <p><%= student.interest %></p>
+              <p>《<%= link_to student.profession.name, refinery.fg_profession_path(student.profession) %>》</p>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= will_paginate @students, {:previous_label => '上一页', :next_label => '下一页'} %>
+</div>

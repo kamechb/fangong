@@ -1,6 +1,6 @@
 <div class="span5">
   <div class="box">
-    <h3 class="box-header"><span class="box-title">企业合作</span></h3>
+    <h3 class="box-header"><%= link_to "企业合作", main_app.cooperation_organization_path, :class => "box-title" %></h3>
     <div class="box-content">
       <ul class="thumbnails works">
       <% @cooperations.each do |cooperation| %>

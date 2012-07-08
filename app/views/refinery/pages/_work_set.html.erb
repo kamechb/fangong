@@ -2,7 +2,7 @@
 
     <div class="span4">
       <div class="box">
-        <h3 class="box-header"><span class="box-title">作品展示</span></h3>
+        <h3 class="box-header"><%= link_to "作品展示", refinery.fg_works_path, :class => "box-title" %></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
           <% @works.limit(4).each do |work| %>
@@ -21,7 +21,7 @@
 
     <div class="span5">  
       <div class="box">
-        <h3 class="box-header"><span class="box-title">产品研发</span></h3>
+        <h3 class="box-header"><%= link_to "产品研发", refinery.research_fg_works_path, :class => "box-title" %></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
           <% @research_works.limit(4).each do |work| %>
