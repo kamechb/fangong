@@ -61,7 +61,7 @@ var BoardLayout = function () {
                 for (c = 0; c < this.columns; c++) this.pinArray[c] = 0;
                 document.getElementById("SortableButtons") ? this.showPins() : this.flowPins(a, true);
                 if ($("#ColumnContainer .pin").length === 0 && window.location.pathname === "/") {
-                    $("#ColumnContainer").addClass("empty");
+		    $("#ColumnContainer").addClass("empty");
                     setTimeout(function () {
                         window.location.reload()
                     }, 5E3)
@@ -256,6 +256,7 @@ var BoardPicker = function () {
         }
     }();
     
-    
+if($('.BoardLayout').length){
   BoardLayout.contentArea = 940;
   BoardLayout.setup();
+}
