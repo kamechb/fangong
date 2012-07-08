@@ -26,7 +26,7 @@
 
         <div class="relativeInfo works">
           <h2><%= t('.other') %></h2>
-          <ul>
+          <ul class="thumbnails">
             <% @other_works.each do |work| %>
               <li>
                 <a class="imageContainer pull-left" href="<%= refinery.fg_work_path(work) %>">

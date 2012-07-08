@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require init_font
+//= require bundle
 //= require fg

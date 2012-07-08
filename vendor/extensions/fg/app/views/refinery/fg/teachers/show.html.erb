@@ -18,10 +18,10 @@
         </div>
         <div class="relativeInfo teachers">
           <h2><%= t('.other') %></h2>
-          <ul>
+          <ul class="thumbnails">
             <% @teachers.each do |teacher| %>
               <li>
-                <a class="imageContainer pull-left" href="<%= refinery.fg_teacher_path(teacher) %>">
+                <a class="imageContainer" href="<%= refinery.fg_teacher_path(teacher) %>">
                   <%= image_fu teacher.avatar, "50x50!"%>
                 </a>
               </li>
