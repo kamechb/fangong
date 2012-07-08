@@ -3,18 +3,20 @@
     <div class="page-header">
       <h1>网站地图</h1>
     </div>
-    <ul>
+    <ul id="sitemap">
       <li>
         <%= link_to "首页", "/" %>
       </li>
 
       <li>
         <%= link_to "专业", refinery.fg_professions_path %>
+	<ul>
         <% Refinery::Fg::Profession.all.each do |p| %>
           <li>
             <%= link_to p.name, refinery.fg_profession_path(p) %>
           </li>
         <% end %>
+        </ul>
       </li>
 
       <li>
