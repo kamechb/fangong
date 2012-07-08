@@ -119,6 +119,8 @@ img{
 }
 #header{
   color: #333;
+}
+#header address, #header .info{
   margin-top: 10px;
 }
 
