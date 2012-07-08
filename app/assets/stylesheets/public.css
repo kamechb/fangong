@@ -234,33 +234,19 @@ img{
 }
 .follow-icon{
   display: block;
-  height: 20px;
-  width: 20px;
-  background: url(/assets/icons_follow.png) no-repeat;
+  height: 32px;
+  width: 32px;
+  background: url(/assets/social_icons.png) no-repeat;
 }
 .follow-sinawb{
   background-position: 0 0;
 }
-.follow-sohuwb{
-  background-position: -30px 0;
-}
 .follow-qqwb{
-  background-position: -60px 0;
+  background-position: 0 -1760px;
 }
-.follow-neteasewb{
-  background-position: -90px 0;
-}
-.follow-sinawb:hover{
-  background-position: 0 -30px;
-}
-.follow-sohuwb:hover{
-  background-position: -30px -30px;
-}
-.follow-qqwb:hover{
-  background-position: -60px -30px;
-}
-.follow-neteasewb:hover{
-  background-position: -90px -30px;
+.follow-icon:hover{
+  opacity: .8;
+  filter: alpha(opacity=80)
 }
 .share-icon{
   display: block;
@@ -933,6 +919,9 @@ legend p{
   float:none;
   border: 1px solid #969a5a;
   background: #e6ec8a;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  boder-radius: 3px;
 }
 .pagination a:hover{
   border: 1px solid #969a5a;
