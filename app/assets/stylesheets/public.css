@@ -465,6 +465,8 @@ img{
 }
 .events li{
   margin-bottom: 20px;
+  height: 80px;
+  border: 1px solid #eee;
 }
 .event img{
   width: 110px;
