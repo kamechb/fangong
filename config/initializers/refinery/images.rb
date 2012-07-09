@@ -52,7 +52,7 @@ Refinery::ImageHelper.module_eval do
 
       image_tag(thumbnail_image.url, {
         :alt => image.respond_to?(:title) ? image.title : image.image_name,
-        :style => "width:#{thumbnail_image.width};height:#{thumbnail_image.height}"
+        :style => "width:#{thumbnail_image.width}px;height:#{thumbnail_image.height}px"
       }.merge(options))
     end
   end
