@@ -44,9 +44,9 @@ var BoardLayout = function () {
             },
             columnCount: 4,
             columns: 0,
-            columnWidthInner: 190,
-            columnMargin: 20,
-            columnPadding: 30,
+            columnWidthInner: 205,
+            columnMargin: 10,
+            columnPadding: 22,
             columnContainerWidth: 0,
             allPins: function () {
                 var a = $(this.pinsContainer + " .pin"),

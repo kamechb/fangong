@@ -15,7 +15,7 @@
   * height: 152px
 
 == 作品展示缩略图
-  * width: 180px
+  * width: 205px
   * height: 根据宽度等比例缩放，要求后端根据宽度计算出高度送给前端，格式：<img style="height: xxpx" ... />
 
 == 学员活动缩略图
