@@ -432,6 +432,10 @@ img{
 .events p{
   margin: 0;
  }
+.friendLinkSet a{
+  margin-right: 10px;
+  line-height: 26px;
+}
 /*------------------信息------------------*/
 
 .header2{
