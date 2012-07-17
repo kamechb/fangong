@@ -5,7 +5,7 @@
         <h3 class="box-header"><%= link_to "作品展示", refinery.fg_works_path, :class => "box-title" %></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
-          <% @works.limit(4).each do |work| %>
+          <% @works.each do |work| %>
             <li>
               <%= link_to image_fu(work.main_image, '142x152#c'), refinery.fg_work_path(work) %>
               <p><%= work.desc %></p>
@@ -24,7 +24,7 @@
         <h3 class="box-header"><%= link_to "产品研发", refinery.research_fg_works_path, :class => "box-title" %></h3>
         <div class="box-content">
           <ul class="row thumbnails works">
-          <% @research_works.limit(4).each do |work| %>
+          <% @research_works.each do |work| %>
             <li>
               <%= link_to image_fu(work.main_image, '142x152#c'), refinery.fg_work_path(work) %>
               <p><%= work.desc %></p>

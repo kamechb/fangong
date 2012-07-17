@@ -2,7 +2,7 @@
   <h3 class="box-header"><%= link_to "最新资讯", refinery.fg_reports_path, :class => "box-title" %></h3>
   <div class="box-content">
     <ul class="row events">
-    <% @reports.limit(4).each do |report| %>
+    <% @reports.each do |report| %>
       <li class="span4">
         <a class="imageContainer pull-left" href="<%= refinery.fg_report_path(report) %>"><%= image_fu report.image, "80x80!", {:width => 80} %></a>
         <h4><%= link_to report.title, refinery.fg_report_path(report) %><small> <%= show_time(report.created_at) %></small></h4>

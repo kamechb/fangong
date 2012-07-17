@@ -8,16 +8,16 @@ Refinery::PagesController.class_eval do
   end
 
   def find_works
-    @works = Refinery::Fg::Work.limit 8
-    @research_works = Refinery::Fg::Work.where(:research => true).limit(8)
+    @works = Refinery::Fg::Work.limit(4).order("created_at DESC")
+    @research_works = Refinery::Fg::Work.where(:research => true).limit(4).order("created_at DESC")
   end
 
   def find_reports
-    @reports = Refinery::Fg::Report.order("created_at DESC").limit(8)
+    @reports = Refinery::Fg::Report.order("created_at DESC").limit(4)
   end
 
   def find_activities
-    @activities = Refinery::Fg::Activity.limit(4)
+    @activities = Refinery::Fg::Activity.limit(4).order("created_at DESC")
   end
 
   def find_cooperations
@@ -25,6 +25,6 @@ Refinery::PagesController.class_eval do
   end
 
   def find_links
-    @links = Refinery::Fg::Link.where(:cooperation => false)
+    #@links = Refinery::Fg::Link.where(:cooperation => false)
   end
 end
