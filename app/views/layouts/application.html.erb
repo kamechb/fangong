@@ -9,6 +9,11 @@
     <div id="content">
       <%= yield %>
     </div>
+    <div id="friendLink">
+      <div class="container">
+      <%= render :partial => "refinery/pages/friend_links" %>
+      </div>
+    </div>
     <div id="footer">
       <%= render '/refinery/footer' -%>
     </div>

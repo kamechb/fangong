@@ -2,7 +2,7 @@
     <h3 class="box-header"><%= link_to "友情链接", refinery.fg_links_path, :class => "box-title" %></h3>
     <div class="box-content">
       <div class="friendLinkSet">
-      <% @links.each do |link| %>
+      <% Refinery::Fg::Link.where(:cooperation => false).each do |link| %>
         <%= link_to link.name, link.url %>
       <% end %>
       </div>
