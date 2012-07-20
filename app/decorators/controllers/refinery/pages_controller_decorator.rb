@@ -1,6 +1,6 @@
 Refinery::PagesController.class_eval do
     
-  before_filter :find_works, :find_propagandas, :find_reports, :find_activities, :find_cooperations, :find_links, :only => [:home]
+  before_filter :find_works, :find_propagandas, :find_reports, :find_activities, :find_cooperations, :only => [:home]
   protected
 
   def find_propagandas
@@ -24,7 +24,4 @@ Refinery::PagesController.class_eval do
     @cooperations = Refinery::Fg::Link.where(:cooperation => true).limit(4)
   end
 
-  def find_links
-    #@links = Refinery::Fg::Link.where(:cooperation => false)
-  end
 end
