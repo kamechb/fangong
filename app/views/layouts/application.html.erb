@@ -9,22 +9,20 @@
     <div id="content">
       <%= yield %>
     </div>
-    <div id="friendLink">
-      <div class="container">
-      <%= render :partial => "refinery/pages/friend_links" %>
-      </div>
-    </div>
     <div id="footer">
       <%= render '/refinery/footer' -%>
     </div>
     <%= render '/refinery/javascripts' %>
 
+    <div id="friendLink">
+      <%= render :partial => "refinery/pages/friend_links" %>
+    </div>
     <div id="copyright">
       <div class="container">
-        <p>
+        <div class="well-large">
           <span>COPYRIGHT © 2012  (凡宫造型)</span>
-        </p>
-        <p class="trademarks">浙ICP备12015390号</p>
+       
+        <span class="trademarks">浙ICP备12015390号</span>
       </div>
     </div>
     <button type="button" class="Button2 WhiteButton Indicator Offscreen" id="ScrollToTop">

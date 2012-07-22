@@ -23,6 +23,7 @@ h1 {
 h2,
 h3 {
   font-size: 14px;
+  line-height: 1.5;
 }
 h4{
   font-size: 14px;
@@ -159,28 +160,44 @@ img{
   overflow: hidden;
   margin: 1 auto;
 }
+#friendLink{
+  font: 12px/22px tahoma,Geneva,sans-serif;
+}
+#friendLink h3{
+  color: #cfc8b8;
+color: #ded9cd;
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+#friendLink a{
+ color: #837c76;
+ opacity: .8;
+ filter: alpha(opacity=80);
+}
 #copyright{
-  height: 95px;
+  color: #837c76;
+  font-size: 10px;
+  font-variant: small-caps;
+  margin: 0; 
+  text-align: center;
+}
+#copyright .container, #friendLink .container{
+  background-color: #232323;
+  border-bottom: 1px solid #151515;
 }
 #copyright .container{
-  background-color: #232323;
-  padding-top: 35px;
-  border-bottom: 1px solid #151515;
+  border-top: 1px solid #333;
 }
 #copyright .trademarks {
   font-size: 11px;
   padding: 3px 0 30px 20px;
 }
-#copyright p {
-  color: #837E76;
-  font-size: 10px;
-  font-variant: small-caps;
-  padding: 10px 20px;
-  margin: 0;
-}
-#copyright a {
-  color: #CDA869;
-  text-decoration: none;
+#copyright span{
+  color: #837c76;
+  opacity: .6;
+  filter: alpha(opacity=60);
 }
 #sitemap ul{
   margin-left: 28px;
@@ -293,12 +310,14 @@ img{
   margin-right: 0;
   right: 20px;
   bottom: 20px;
+  position: static;
+  
 }
 .viewAll a{
   color: #999;
   background: #e6ec8a;  
   -webkit-border-radius: 6px;
-  moz-border-radius: 6px;
+  -moz-border-radius: 6px;
   border-radius: 6px;  
   padding: 3px 10px;
   text-decoration: none;
@@ -564,10 +583,10 @@ legend p{
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(34,25,25,0.4);
   margin: 76px auto 32px;
-  moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
   padding: 0 18px 10px;
   position: relative;
-  webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 }
 .WhiteContainer h2{
   font-size: 32px;
@@ -594,10 +613,10 @@ legend p{
 }
 #NewIndicator{
   left: -3px;
-  moz-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
   padding: 10px;
   top: 88px;
-  webkit-transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
   width: 145px;
 }
 #NewIndicator.TopNag{
@@ -605,8 +624,8 @@ legend p{
 }
 #NewIndicator.Offscreen{
   left: -175px;
-  moz-transition-duration: 250ms;
-  webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
 }
 .pin{
   background-color: #f5f5f5;
@@ -638,8 +657,8 @@ legend p{
   font-size: 11px;
   height: 22px;
   left: -28px;
-  moz-transform: rotate(-45deg);
-  ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   o-transform: rotate(-45deg);
   overflow: hidden;
   padding-top: 8px;
@@ -891,10 +910,10 @@ legend p{
   box-shadow: 0 0 #fff, 0 1px 3px rgba(34,25,25,0.5);
   display: block;
   font-size: 15px;
-  moz-box-shadow: 0 0 #fff, 0 1px 3px rgba(34,25,25,0.5);
+  -moz-box-shadow: 0 0 #fff, 0 1px 3px rgba(34,25,25,0.5);
   position: fixed;
   text-align: center;
-  webkit-box-shadow: 0 0 #fff, 0 1px 3px rgba(34,25,25,0.5);
+  -webkit-box-shadow: 0 0 #fff, 0 1px 3px rgba(34,25,25,0.5);
   z-index: 4;
 }
 .Button2.WhiteButton {
@@ -915,9 +934,10 @@ legend p{
 .linkTo{
   color: #999;  
   font-size: 12px;
-  position: absolute;
   right: 20px;
   bottom: 20px;
+  margin-top: 10px;
+  float: right;
 }
 .linkTo:hover{
   color: #333;  
@@ -981,6 +1001,7 @@ form .error{
   vertical-align: middle;
 }
 .qqFixed .qqTitle{
+  color: #333;
   vertical-align: middle;
   display: inline-block;
   *display: inline;
