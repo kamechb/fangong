@@ -15,3 +15,4 @@
 //= require init_font
 //= require bundle
 //= require fg
+//= require carousel
