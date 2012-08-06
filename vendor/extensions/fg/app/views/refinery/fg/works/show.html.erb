@@ -12,29 +12,29 @@
 
     <div class="span9">
       <div class="well clearfix">
-					<div id="wptg_Carousel2" class="carousel wtsCarousel slide">
-					<!-- Carousel items -->
-						<div class="carousel-inner">
-						<% Refinery::Fg::Work.all.each_with_index do |work, index| %>
-							<div class="item <%= 'active' if index == 0 %>">
-								<div class="contentSlide">
-									<div class="work">
-										<h2><%= @work.name %><small><%= show_time(@work.created_at) %></small></h2>
-										<div class="imageContainer" >
-											<%= image_fu work.main_image, "380x380" %>
-										</div>
-										<p><%= work.desc %></p>
-										<div>
-											<%= raw work.content %>
-										</div>
-									</div>        
-								</div>
-							</div>
-						<% end %>
-						</div>
-						<a class="carousel-control left" href="#wptg_Carousel2" data-slide="prev">&lsaquo;</a>
-						<a class="carousel-control right" href="#wptg_Carousel2" data-slide="next">&rsaquo;</a>
-					</div><!-- carousel -->
+          <div id="wptg_Carousel2" class="carousel wtsCarousel slide">
+          <!-- Carousel items -->
+            <div class="carousel-inner">
+            <% @category_works.each do |work| %>
+              <div class="item <%= actived(work.id, @work.id) %>">
+                <div class="contentSlide">
+                  <div class="work">
+                    <h2><%= @work.name %><small><%= show_time(@work.created_at) %></small></h2>
+                    <div class="imageContainer" >
+                      <%= image_fu work.main_image, "380x380" %>
+                    </div>
+                    <p><%= work.desc %></p>
+                    <div>
+                      <%= raw work.content %>
+                    </div>
+                  </div>        
+                </div>
+              </div>
+            <% end %>
+            </div>
+            <a class="carousel-control left" href="#wptg_Carousel2" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#wptg_Carousel2" data-slide="next">&rsaquo;</a>
+          </div><!-- carousel -->
       </div><!-- well -->
     </div><!-- span9 -->
   </div><!-- row -->
@@ -43,11 +43,11 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag 'carousel' %>
   <script>
-	jQuery(function () {
-		jQuery('.wtsCarousel').carousel({
-			interval: false
-		});
-	})
+  jQuery(function () {
+    jQuery('.wtsCarousel').carousel({
+      interval: false
+    });
+  })
   </script>
 
 <% end %>

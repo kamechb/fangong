@@ -20,12 +20,18 @@ module Refinery
 
       def show
         @work = Work.find(params[:id])
-        @next_work = Work.where("id > ?", params[:id]).limit(1).first
-        @pre_work = Work.where("id < ?", params[:id]).order("id DESC").limit(1).first
-        @other_works = [@pre_work, @next_work].compact
+        @category_name = @work.tags.limit(1).first.try(:name)
 
-        #@works = Work.all
-        #@works = Work.tagged_with(@work.tag_list)
+        if @category_name
+          @category_works = Work.tagged_with(@category_name).order("created_at DESC").limit(50).all
+        else
+          @category_works = [@work]
+        end
+
+        # @next_work = Work.where("id > ?", params[:id]).limit(1).first
+        # @pre_work = Work.where("id < ?", params[:id]).order("id DESC").limit(1).first
+        # @other_works = [@pre_work, @next_work].compact
+
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @work in the line below:
         present(@page)

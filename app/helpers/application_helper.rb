@@ -9,4 +9,8 @@ module ApplicationHelper
   def show_time(time)
     time.strftime("%Y-%m-%d")
   end
+
+  def actived(current, required, class_name = "active")
+    current == required ? class_name : nil
+  end
 end
