@@ -16,8 +16,8 @@ module ApplicationHelper
   
   def proportion_height(image, width = nil)
     return nil if width.nil?
-    orig_width = image.width.to_f
-    orig_height = image.height.to_f
+    orig_width = image.image_width.to_f
+    orig_height = image.image_height.to_f
     width = width.to_f
     height = ((orig_height / orig_width) * width).round
   end
