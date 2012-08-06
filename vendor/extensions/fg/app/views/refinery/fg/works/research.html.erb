@@ -6,7 +6,7 @@
       <% @works.each do |work| %>
       <div data-height="400" data-width="500" data-id="<%= work.id %>" class="pin">
         <div class="PinHolder">
-          <%= link_to(image_fu(work.main_image, "205x"), refinery.fg_work_path(work), :class => "PinImage ImgLink")%>
+          <%= link_to(style_image_fu(work.main_image, "205x"), refinery.fg_work_path(work), :class => "PinImage ImgLink")%>
         </div>
         <p class="description"><%= work.name %></p>
       </div>      
