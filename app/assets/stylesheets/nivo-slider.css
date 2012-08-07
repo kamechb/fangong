@@ -76,7 +76,7 @@
 	background-repeat: no-repeat;	
 }
 .nivo-prevNav, .nivo-nextNav{
-	background-image: url(../img/shortcodes/arrowsAS.png);
+	/* background-image: url(../img/shortcodes/arrowsAS.png); */
 	height: 30px;
 	width: 30px;
 }
