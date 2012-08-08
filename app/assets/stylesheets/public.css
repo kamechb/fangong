@@ -1007,16 +1007,10 @@ form .error{
   *display: inline;
   *zoom: 1;
 }
-.carousel-inner{
-	height: 480px;
+.contentSlide .imageContainer img{
+	width: 660px;
 }
-.contentSlide {
-  padding: 10px 25px;
-  text-align: center;
+.carousel-control{
+	top: 250px;
 }
-.contentSlide .imageContainer{
-	max-height: 340px;
-	overflow: hidden;
-}
-
 
