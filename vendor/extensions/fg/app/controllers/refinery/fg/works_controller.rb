@@ -28,6 +28,10 @@ module Refinery
           @category_works = [@work]
         end
 
+        # @work insert to first for page load it first
+        @category_works.delete_if { |work| work == @work }
+        @category_works.unshift(@work)
+
         # @next_work = Work.where("id > ?", params[:id]).limit(1).first
         # @pre_work = Work.where("id < ?", params[:id]).order("id DESC").limit(1).first
         # @other_works = [@pre_work, @next_work].compact
