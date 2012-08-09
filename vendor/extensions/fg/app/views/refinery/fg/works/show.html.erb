@@ -19,15 +19,15 @@
               <div class="item <%= actived(work.id, @work.id) %>">
                 <div class="contentSlide">
                   <div class="work">
-                    <h2><%= work.name %><small><%= show_time(work.created_at) %></small></h2>
                     <div class="imageContainer" >
+                      <h2><%= work.name %><small><%= show_time(work.created_at) %></small></h2>
                       <% if work.main_image.image_width < 660 %>
                         <%= image_fu work.main_image, nil %>
                       <% else %>
                         <%= image_fu work.main_image, "660x" %>
                       <% end %>
+                      <p><%= work.desc %></p>
                     </div>
-                    <p><%= work.desc %></p>
                   </div>        
                 </div>
               </div>
